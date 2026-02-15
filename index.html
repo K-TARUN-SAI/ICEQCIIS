@@ -20,7 +20,9 @@
                     colors: {
                         brand: {
                             blue: '#1e3a8a', // Deep Royal Blue
+                            darkBlue: '#0a0f23', // Quantum Space Dark
                             lightBlue: '#3b82f6',
+                            cyan: '#00F0FF', // Neon Cyan for Quantum effects
                             gold: '#fbbf24', // Amber/Gold
                             dark: '#0f172a',
                         }
@@ -34,101 +36,105 @@
         }
     </script>
     <style>
+        /* Custom Glassmorphism for Navbar */
         .glass-nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(10, 15, 35, 0.85);
+            /* Dark Deep Space Blue */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        /* Gradient for Hero Overlay to ensure text readability on complex backgrounds */
         .hero-overlay {
-            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+            background: linear-gradient(180deg, rgba(10, 15, 35, 0.3) 0%, rgba(10, 15, 35, 0.8) 100%);
         }
 
         .text-shadow {
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .neon-glow:hover {
+            text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
         }
     </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-gold selection:text-brand-blue">
+<body class="text-slate-800 font-sans antialiased selection:bg-brand-cyan selection:text-brand-darkBlue"
+    style="background-image: url('assets/image.png'); background-size: cover; background-attachment: fixed; background-position: center; background-color: #050914;">
 
-    <!-- Navigation -->
-    <nav
-        class="fixed w-full z-50 bg-brand-blue shadow-md transition-all duration-300 backdrop-blur-sm border-b border-white/10">
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <span class="font-serif font-bold text-xl text-white tracking-tight ml-2">ICEQCIIS-2026</span>
+                    <span
+                        class="font-serif font-bold text-xl text-white tracking-tight ml-2 drop-shadow-md">ICEQCIIS-2026</span>
                 </div>
 
-                <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center space-x-8">
                     <a href="#about"
-                        class="text-sm font-medium text-white hover:text-brand-gold transition-colors">About</a>
+                        class="text-sm font-medium text-gray-200 hover:text-brand-cyan transition-colors neon-glow">About</a>
                     <a href="#speakers"
-                        class="text-sm font-medium text-white hover:text-brand-gold transition-colors">Keynote
+                        class="text-sm font-medium text-gray-200 hover:text-brand-cyan transition-colors neon-glow">Keynote
                         Speakers</a>
                     <a href="#tracks"
-                        class="text-sm font-medium text-white hover:text-brand-gold transition-colors">Tracks</a>
+                        class="text-sm font-medium text-gray-200 hover:text-brand-cyan transition-colors neon-glow">Tracks</a>
                     <a href="#committee"
-                        class="text-sm font-medium text-white hover:text-brand-gold transition-colors">Committee</a>
-                    <a href="#cfp" class="text-sm font-medium text-white hover:text-brand-gold transition-colors">Call
+                        class="text-sm font-medium text-gray-200 hover:text-brand-cyan transition-colors neon-glow">Committee</a>
+                    <a href="#cfp"
+                        class="text-sm font-medium text-gray-200 hover:text-brand-cyan transition-colors neon-glow">Call
                         for Papers</a>
                     <a href="#dates"
-                        class="text-sm font-medium text-white hover:text-brand-gold transition-colors">Dates</a>
+                        class="text-sm font-medium text-gray-200 hover:text-brand-cyan transition-colors neon-glow">Dates</a>
                     <a href="#registration"
-                        class="text-sm font-medium text-white hover:text-brand-gold transition-colors">Registration</a>
+                        class="text-sm font-medium text-gray-200 hover:text-brand-gold transition-colors neon-glow">Registration</a>
                     <a href="#contact"
-                        class="text-sm font-medium text-white hover:text-brand-gold transition-colors">Contact</a>
+                        class="text-sm font-medium text-gray-200 hover:text-brand-cyan transition-colors neon-glow">Contact</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <div class="lg:hidden">
-                    <button id="mobile-menu-btn" class="text-white hover:text-brand-gold focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-cyan focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <!-- Mobile Menu (hidden by default) -->
-        <div class="hidden lg:hidden bg-brand-blue border-t border-white/10" id="mobile-menu">
+        <div class="hidden lg:hidden bg-[#0a0f23]/95 backdrop-blur-xl border-t border-white/10" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#about"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">About</a>
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-cyan hover:bg-white/5">About</a>
                 <a href="#speakers"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">Keynote
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-cyan hover:bg-white/5">Keynote
                     Speakers</a>
                 <a href="#tracks"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">Tracks</a>
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-cyan hover:bg-white/5">Tracks</a>
                 <a href="#committee"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">Committee</a>
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-cyan hover:bg-white/5">Committee</a>
                 <a href="#cfp"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">Call
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-cyan hover:bg-white/5">Call
                     for Papers</a>
                 <a href="#dates"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">Dates</a>
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-cyan hover:bg-white/5">Dates</a>
                 <a href="#registration"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">Registration</a>
+                    class="block px-3 py-2 rounded-md text-base font-medium text-brand-gold hover:text-white hover:bg-white/5">Registration</a>
                 <a href="#contact"
-                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">Contact</a>
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-cyan hover:bg-white/5">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        <!-- Background Image -->
-        <div class="absolute inset-0 z-0">
-            <img src="assets/hero_bg.jpg" alt="Conference Background" class="w-full h-full object-cover">
-            <div class="absolute inset-0 hero-overlay"></div>
-        </div>
+        <div class="absolute inset-0 z-0 hero-overlay"></div>
 
         <div class="relative z-10 max-w-6xl mx-auto px-4 text-center text-white mt-8">
-            <!-- Logos Centered -->
             <div class="flex justify-center items-center gap-8 mb-10">
-                <img src="assets/KLEF.png" alt="KLEF Logo"
-                    class="w-40 md:w-64 h-auto object-contain filter drop-shadow-lg">
-                <img src="assets/IntiMain.png" alt="INTI Logo"
-                    class="w-48 md:w-96 h-auto object-contain filter drop-shadow-lg">
+                <div
+                    class="bg-white backdrop-blur-sm p-4 rounded-xl border border-white/20 inline-flex gap-8 items-center shadow-lg">
+                    <img src="assets/KLEF.png" alt="KLEF Logo"
+                        class="w-32 md:w-56 h-auto object-contain filter drop-shadow-lg">
+                    <img src="assets/IntiMain.png" alt="INTI Logo"
+                        class="w-40 md:w-80 h-auto object-contain filter drop-shadow-lg">
+                </div>
             </div>
 
             <h1 class="font-serif text-4xl md:text-6xl font-bold mb-4 leading-tight text-shadow tracking-tight">
@@ -140,60 +146,45 @@
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10 text-lg font-medium">
                 <div
-                    class="flex items-center gap-2 text-white bg-white/10 px-4 py-2 rounded-full backdrop-blur-md border border-white/20">
-                    <i class="far fa-calendar-alt text-brand-gold"></i>
+                    class="flex items-center gap-2 text-white bg-brand-darkBlue/40 px-6 py-2 rounded-full backdrop-blur-md border border-brand-cyan/30 shadow-[0_0_15px_rgba(0,240,255,0.1)]">
+                    <i class="far fa-calendar-alt text-brand-cyan"></i>
                     <span>9-10th April 2026</span>
                 </div>
                 <div
-                    class="flex items-center gap-2 text-white bg-white/10 px-4 py-2 rounded-full backdrop-blur-md border border-white/20">
-                    <i class="fas fa-map-marker-alt text-brand-gold"></i>
+                    class="flex items-center gap-2 text-white bg-brand-darkBlue/40 px-6 py-2 rounded-full backdrop-blur-md border border-brand-cyan/30 shadow-[0_0_15px_rgba(0,240,255,0.1)]">
+                    <i class="fas fa-map-marker-alt text-brand-cyan"></i>
                     <span>Hybrid Mode</span>
                 </div>
             </div>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a href="#submit"
-                    class="bg-brand-gold text-brand-blue font-bold py-3 px-8 rounded hover:bg-yellow-400 transition-all shadow-lg text-lg">
+                    class="bg-brand-gold text-brand-darkBlue font-bold py-3 px-8 rounded hover:bg-yellow-400 transition-all shadow-lg text-lg border border-yellow-500">
                     Submit Paper
                 </a>
                 <a href="#registration"
-                    class="bg-white text-brand-blue font-bold py-3 px-8 rounded hover:bg-slate-100 transition-all shadow-lg text-lg">
+                    class="bg-transparent border-2 border-brand-cyan text-brand-cyan font-bold py-3 px-8 rounded hover:bg-brand-cyan hover:text-brand-darkBlue transition-all shadow-lg text-lg shadow-[0_0_10px_rgba(0,240,255,0.2)]">
                     Register
                 </a>
             </div>
 
             <div class="inline-block">
                 <a href="#brochure"
-                    class="group border-2 border-white/50 text-white font-medium py-2 px-6 rounded hover:bg-white/10 transition-all flex items-center gap-2">
+                    class="group border border-white/30 text-slate-200 font-medium py-2 px-6 rounded hover:bg-white/10 hover:text-white transition-all flex items-center gap-2 backdrop-blur-sm">
                     Download Brochure
                 </a>
             </div>
 
-            <!-- Countdown Placeholder -->
-            <div class="mt-12 text-blue-200 font-mono text-sm uppercase tracking-widest">
+            <div class="mt-12 text-brand-cyan font-mono text-sm uppercase tracking-widest shadow-black drop-shadow-md">
                 Starts in: 52d 14h 40m
             </div>
         </div>
 
-        <!-- Fixed Floating Buttons -->
-        <div class="fixed bottom-8 right-8 z-50 flex flex-col gap-3">
-            <a href="#submit"
-                class="bg-brand-gold text-brand-blue font-bold py-3 px-6 rounded shadow-xl hover:bg-yellow-400 transition-all flex items-center gap-2">
-                <i class="fas fa-paper-plane"></i> Submit
-            </a>
-            <a href="#registration"
-                class="bg-brand-blue text-white font-bold py-3 px-6 rounded shadow-xl hover:bg-blue-900 transition-all flex items-center gap-2 border border-white/20">
-                <i class="fas fa-user-plus"></i> Register
-            </a>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50">
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-brand-cyan/70">
             <i class="fas fa-chevron-down text-2xl"></i>
         </div>
     </header>
 
-    <!-- About Section -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -216,7 +207,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- KLEF -->
                 <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
                     <h3 class="text-xl font-bold text-brand-lightBlue mb-4">About KLEF</h3>
                     <p class="text-slate-600 text-sm leading-relaxed text-justify">
@@ -229,7 +219,6 @@
                     </p>
                 </div>
 
-                <!-- INTI -->
                 <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
                     <h3 class="text-xl font-bold text-brand-lightBlue mb-4">About INTI International University</h3>
                     <p class="text-slate-600 text-sm leading-relaxed text-justify">
@@ -245,11 +234,9 @@
         </div>
     </section>
 
-    <!-- Conference Details Section -->
     <section class="py-16 bg-white border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 lg:gap-24 mb-16">
-                <!-- Objectives -->
                 <div class="border-l-4 border-brand-gold pl-6">
                     <h3 class="text-3xl font-bold text-slate-800 mb-8">Conference Objectives</h3>
                     <ul class="space-y-4">
@@ -282,7 +269,6 @@
                     </ul>
                 </div>
 
-                <!-- Highlights -->
                 <div class="border-l-4 border-brand-blue pl-6">
                     <h3 class="text-3xl font-bold text-slate-800 mb-8">Key Highlights</h3>
                     <ul class="space-y-4">
@@ -313,21 +299,52 @@
                 </div>
             </div>
 
-            <!-- Content Divider -->
             <div class="border-t border-slate-200 my-12"></div>
 
-            <!-- Who Should Attend -->
             <div class="text-center">
                 <h3 class="text-2xl font-bold text-slate-800 mb-6">Who Should Attend?</h3>
-                <p class="text-slate-600 text-lg font-medium leading-relaxed max-w-5xl mx-auto">
-                    Academicians, Researchers, Ph.D. Scholars, PG Students, Industry Professionals, Security Analysts,
-                    System Architects, Innovators, and Start-ups.
-                </p>
+                <ul class="text-slate-600 text-lg font-medium leading-relaxed max-w-3xl mx-auto text-left space-y-2">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-brand-blue mt-1"></i>
+                        <span>Academicians</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-brand-blue mt-1"></i>
+                        <span>Researchers</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-brand-blue mt-1"></i>
+                        <span>Ph.D. Scholars</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-brand-blue mt-1"></i>
+                        <span>PG Students</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-brand-blue mt-1"></i>
+                        <span>Industry Professionals</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-brand-blue mt-1"></i>
+                        <span>Security Analysts</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-brand-blue mt-1"></i>
+                        <span>System Architects</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-brand-blue mt-1"></i>
+                        <span>Innovators</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check-circle text-brand-blue mt-1"></i>
+                        <span>Start-ups</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Tracks Section -->
     <section id="tracks" class="py-20 bg-slate-50 relative">
         <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5">
         </div>
@@ -339,9 +356,7 @@
                 <p class="text-slate-600">Submissions are invited in the following tracks (but not limited to):</p>
             </div>
 
-            <!-- Changed Grid to Flex for better centering of odd number of tracks -->
             <div class="flex flex-wrap justify-center gap-8">
-                <!-- Track 1 -->
                 <div
                     class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all border border-slate-200 overflow-hidden w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
                     <div class="bg-brand-blue/90 p-4">
@@ -368,7 +383,6 @@
                     </div>
                 </div>
 
-                <!-- Track 2 -->
                 <div
                     class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all border border-slate-200 overflow-hidden w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
                     <div class="bg-brand-blue/90 p-4">
@@ -398,7 +412,6 @@
                     </div>
                 </div>
 
-                <!-- Track 3 -->
                 <div
                     class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all border border-slate-200 overflow-hidden w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
                     <div class="bg-brand-blue/90 p-4">
@@ -428,7 +441,6 @@
                     </div>
                 </div>
 
-                <!-- Track 4 -->
                 <div
                     class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all border border-slate-200 overflow-hidden w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
                     <div class="bg-brand-blue/90 p-4">
@@ -456,7 +468,6 @@
                     </div>
                 </div>
 
-                <!-- Track 5 -->
                 <div
                     class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all border border-slate-200 overflow-hidden w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
                     <div class="bg-brand-blue/90 p-4">
@@ -487,8 +498,6 @@
         </div>
     </section>
 
-    <!-- Keynote Speakers -->
-    <!-- Keynote Speakers -->
     <section id="speakers" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -498,7 +507,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
-                <!-- Speaker 1 -->
                 <div class="bg-white rounded-xl shadow border border-slate-200 p-6 text-center cursor-pointer hover:shadow-xl transition-all transform hover:-translate-y-1"
                     onclick="openModal('speaker1')">
                     <div class="w-40 h-40 bg-slate-200 rounded-lg mx-auto mb-4 overflow-hidden">
@@ -508,7 +516,6 @@
                     <p class="text-xs text-brand-blue font-semibold uppercase mt-1">INTI International University</p>
                 </div>
 
-                <!-- Speaker 2 -->
                 <div class="bg-white rounded-xl shadow border border-slate-200 p-6 text-center cursor-pointer hover:shadow-xl transition-all transform hover:-translate-y-1"
                     onclick="openModal('speaker2')">
                     <div class="w-40 h-40 bg-slate-200 rounded-lg mx-auto mb-4 overflow-hidden">
@@ -519,7 +526,6 @@
                     <p class="text-xs text-brand-blue font-semibold uppercase mt-1">University of South Florida, USA</p>
                 </div>
 
-                <!-- Speaker 3 -->
                 <div class="bg-white rounded-xl shadow border border-slate-200 p-6 text-center cursor-pointer hover:shadow-xl transition-all transform hover:-translate-y-1"
                     onclick="openModal('speaker3')">
                     <div
@@ -530,7 +536,6 @@
                     <p class="text-xs text-brand-blue font-semibold uppercase mt-1">Quantum Computing</p>
                 </div>
 
-                <!-- Speaker 4 -->
                 <div class="bg-white rounded-xl shadow border border-slate-200 p-6 text-center cursor-pointer hover:shadow-xl transition-all transform hover:-translate-y-1"
                     onclick="openModal('speaker4')">
                     <div class="w-40 h-40 bg-slate-200 rounded-lg mx-auto mb-4 overflow-hidden">
@@ -545,18 +550,14 @@
         </div>
     </section>
 
-    <!-- Speaker Modal -->
     <div id="speaker-modal" class="fixed inset-0 z-[60] hidden overflow-y-auto" aria-labelledby="modal-title"
         role="dialog" aria-modal="true">
-        <!-- Background backdrop -->
         <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" onclick="closeModal()"></div>
 
         <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
             <div
                 class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl">
-                <!-- Modal Body -->
                 <div class="bg-white pb-4">
-                    <!-- Header -->
                     <div class="bg-brand-lightBlue px-6 py-4 flex justify-between items-center">
                         <h3 class="text-xl font-bold text-white" id="modal-title">Speaker Name</h3>
                         <button type="button" class="text-white hover:text-gray-200 focus:outline-none"
@@ -569,7 +570,6 @@
                         <h4 class="text-lg font-bold text-brand-lightBlue mb-4" id="modal-affiliation">University Name
                         </h4>
                         <div class="text-sm text-gray-600 space-y-4 text-justify leading-relaxed" id="modal-bio">
-                            <!-- Bio content will be injected here -->
                         </div>
                     </div>
                 </div>
@@ -577,7 +577,6 @@
         </div>
     </div>
 
-    <!-- Committee Section -->
     <section id="committee" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -587,7 +586,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-16">
-                <!-- Chief Patrons -->
                 <div>
                     <h3 class="text-xl font-bold text-brand-blue mb-6 border-b pb-2">Chief Patrons</h3>
                     <ul class="space-y-4 text-sm text-slate-700">
@@ -614,9 +612,11 @@
                         <li><span class="font-bold text-brand-blue">Dr. J.R.K Kumar Dabbakuti</span>, Assoc. Professor
                             (Co-Convenor)</li>
                     </ul>
+
+                    <h3 class="text-xl font-bold text-brand-blue mb-6 border-b pb-2 mt-12">Organizing Committee</h3>
+                    <p class="text-slate-600 text-sm">All Faculty Members of IoT</p>
                 </div>
 
-                <!-- Patrons -->
                 <div>
                     <h3 class="text-xl font-bold text-brand-blue mb-6 border-b pb-2">Patrons</h3>
                     <ul class="space-y-4 text-sm text-slate-700">
@@ -636,12 +636,27 @@
                     </ul>
 
                     <h3 class="text-xl font-bold text-brand-blue mb-6 border-b pb-2 mt-12">Advisory Committee</h3>
-                    <p class="text-slate-600 text-sm italic">Includes Directors, Deans, and HODs of KLEF departments.
-                    </p>
+                    <ul class="space-y-4 text-sm text-slate-700">
+                        <li><span class="font-bold text-brand-blue">Prof. Harikiran Vegi</span>, Professor & Additional
+                            Dean Academics</li>
+                        <li><span class="font-bold text-brand-blue">Dr. B.T.P. Madhav</span>, Dean (R & D)</li>
+                        <li><span class="font-bold text-brand-blue">Dr. M. Suman</span>, Professor &
+                            Director-Registrations & Examinations</li>
+                        <li><span class="font-bold text-brand-blue">Dr. I. Govardhini</span>, Professor & HoD ECE</li>
+                        <li><span class="font-bold text-brand-blue">Dr. J. K. R. Sastry</span>, Professor & Advisor</li>
+                        <li><span class="font-bold text-brand-blue">Dr. K. Amarendra</span>, Professor & HoD CSE</li>
+                        <li><span class="font-bold text-brand-blue">Dr. T. Pavan Kumar</span>, Professor & HoD CSE</li>
+                        <li><span class="font-bold text-brand-blue">Dr. Thirupathi Reddy</span>, Professor & HoD CSE
+                        </li>
+                        <li><span class="font-bold text-brand-blue">Dr. V.S.V Prabakar</span>, Professor & HoD AIDS</li>
+                        <li><span class="font-bold text-brand-blue">Dr. V. Viswanath Shenoi</span>, Professor & HoD HTR
+                        </li>
+                    </ul>
+                    <p class="text-slate-600 text-sm italic mt-4">Includes Directors, Deans, and HODs of KLEF
+                        departments.</p>
                 </div>
             </div>
 
-            <!-- Technical Program Committee -->
             <div class="mt-20">
                 <div class="text-center mb-12">
                     <h3 class="font-serif text-2xl font-bold text-brand-blue mb-4 uppercase tracking-wide">Technical
@@ -680,7 +695,6 @@
         </div>
     </section>
 
-    <!-- Call for Papers & Publication -->
     <section id="cfp" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -690,7 +704,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-12">
-                <!-- Submission Guidelines -->
                 <div>
                     <h3 class="text-2xl font-bold text-slate-800 mb-6">Submission Guidelines</h3>
                     <ul class="space-y-4 text-slate-600 mb-8 border-t pt-6">
@@ -723,13 +736,13 @@
                     </div>
                 </div>
 
-                <!-- Publication -->
                 <div>
                     <h3 class="text-2xl font-bold text-slate-800 mb-6">Publication</h3>
                     <p class="text-slate-600 mb-6">
                         Accepted papers will be published in conference proceedings. Selected high-quality papers will
                         be invited for extension in:
                     </p>
+
                     <ul class="space-y-4 text-slate-700 mb-8">
                         <li class="flex items-start gap-3">
                             <i class="fas fa-check-circle text-green-500 mt-1"></i>
@@ -763,13 +776,11 @@
         </div>
     </section>
 
-    <!-- Important Dates -->
     <section id="dates" class="py-24 bg-brand-dark text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-16">Important Dates</h2>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <!-- Date Item -->
                 <div
                     class="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-lg text-center hover:bg-white/10 transition-colors">
                     <div class="text-brand-gold font-bold text-lg mb-2">10 Mar 2026</div>
@@ -797,7 +808,6 @@
         </div>
     </section>
 
-    <!-- Registration -->
     <section id="registration" class="py-24 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -854,7 +864,6 @@
                     </table>
                 </div>
 
-                <!-- Payment Details -->
                 <div class="mt-16 max-w-4xl mx-auto">
                     <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-center mb-8">
                         <span class="text-yellow-800 font-bold">Discounts:</span> <span class="text-slate-700">IEEE
@@ -889,7 +898,17 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <div class="fixed bottom-8 right-8 z-50 flex flex-col gap-3">
+        <a href="#submit"
+            class="bg-brand-gold text-brand-darkBlue font-bold py-3 px-6 rounded shadow-xl hover:bg-yellow-400 transition-all flex items-center gap-2 border border-yellow-500">
+            <i class="fas fa-paper-plane"></i> Submit
+        </a>
+        <a href="#registration"
+            class="bg-brand-darkBlue text-brand-cyan font-bold py-3 px-6 rounded shadow-xl hover:bg-brand-darkBlue/90 transition-all flex items-center gap-2 border border-brand-cyan shadow-[0_0_10px_rgba(0,240,255,0.2)]">
+            <i class="fas fa-user-plus"></i> Register
+        </a>
+    </div>
+
     <footer id="contact" class="bg-slate-900 text-slate-300 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-12">
@@ -997,7 +1016,7 @@
             if (data) {
                 document.getElementById('modal-title').textContent = data.name;
                 document.getElementById('modal-affiliation').textContent = data.affiliation;
-                document.getElementById('modal-bio').textContent = data.bio;
+                document.getElementById('modal-bio').innerHTML = data.bio; // Changed to innerHTML to support <br> tags
                 document.getElementById('speaker-modal').classList.remove('hidden');
                 document.body.style.overflow = 'hidden'; // Prevent background scrolling
             }
