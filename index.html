@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICEQCIIS-2026 | International Conference on Emerging Quantum Computing & IoT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#1e3a8a', // Deep Royal Blue
+                            lightBlue: '#3b82f6',
+                            gold: '#fbbf24', // Amber/Gold
+                            dark: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+        }
+
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-gold selection:text-brand-blue">
+
+    <!-- Navigation -->
+    <nav
+        class="fixed w-full z-50 bg-brand-blue shadow-md transition-all duration-300 backdrop-blur-sm border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <span class="font-serif font-bold text-xl text-white tracking-tight ml-2">ICEQCIIS-2026</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#about"
+                        class="text-sm font-medium text-white hover:text-brand-gold transition-colors">About</a>
+                    <a href="#speakers"
+                        class="text-sm font-medium text-white hover:text-brand-gold transition-colors">Keynote
+                        Speakers</a>
+                    <a href="#tracks"
+                        class="text-sm font-medium text-white hover:text-brand-gold transition-colors">Tracks</a>
+                    <a href="#committee"
+                        class="text-sm font-medium text-white hover:text-brand-gold transition-colors">Committee</a>
+                    <a href="#cfp" class="text-sm font-medium text-white hover:text-brand-gold transition-colors">Call
+                        for Papers</a>
+                    <a href="#dates"
+                        class="text-sm font-medium text-white hover:text-brand-gold transition-colors">Dates</a>
+                    <a href="#registration"
+                        class="text-sm font-medium text-white hover:text-brand-gold transition-colors">Registration</a>
+                    <a href="#contact"
+                        class="text-sm font-medium text-white hover:text-brand-gold transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-gold focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (hidden by default) -->
+        <div class="hidden lg:hidden bg-brand-blue border-t border-white/10" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">About</a>
+                <a href="#speakers"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">Keynote
+                    Speakers</a>
+                <a href="#tracks"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">Tracks</a>
+                <a href="#committee"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">Committee</a>
+                <a href="#cfp"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">Call
+                    for Papers</a>
+                <a href="#dates"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">Dates</a>
+                <a href="#registration"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">Registration</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-brand-gold hover:bg-white/10">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/hero_bg.jpg" alt="Conference Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-4 text-center text-white mt-8">
+            <!-- Logos Centered -->
+            <div class="flex justify-center items-center gap-8 mb-10">
+                <img src="assets/KLEF.png" alt="KLEF Logo"
+                    class="w-40 md:w-64 h-auto object-contain filter drop-shadow-lg">
+                <img src="assets/IntiMain.png" alt="INTI Logo"
+                    class="w-48 md:w-96 h-auto object-contain filter drop-shadow-lg">
+            </div>
+
+            <h1 class="font-serif text-4xl md:text-6xl font-bold mb-4 leading-tight text-shadow tracking-tight">
+                ICEQCIIS-2026
+            </h1>
+            <p class="text-2xl md:text-4xl text-brand-gold font-bold mb-8 max-w-5xl mx-auto text-shadow leading-snug">
+                International Conference on Emerging Quantum Computing and IoT Technologies for Intelligent Security
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10 text-lg font-medium">
+                <div
+                    class="flex items-center gap-2 text-white bg-white/10 px-4 py-2 rounded-full backdrop-blur-md border border-white/20">
+                    <i class="far fa-calendar-alt text-brand-gold"></i>
+                    <span>9-10th April 2026</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 text-white bg-white/10 px-4 py-2 rounded-full backdrop-blur-md border border-white/20">
+                    <i class="fas fa-map-marker-alt text-brand-gold"></i>
+                    <span>Hybrid Mode</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="#submit"
+                    class="bg-brand-gold text-brand-blue font-bold py-3 px-8 rounded hover:bg-yellow-400 transition-all shadow-lg text-lg">
+                    Submit Paper
+                </a>
+                <a href="#registration"
+                    class="bg-white text-brand-blue font-bold py-3 px-8 rounded hover:bg-slate-100 transition-all shadow-lg text-lg">
+                    Register
+                </a>
+            </div>
+
+            <div class="inline-block">
+                <a href="#brochure"
+                    class="group border-2 border-white/50 text-white font-medium py-2 px-6 rounded hover:bg-white/10 transition-all flex items-center gap-2">
+                    Download Brochure
+                </a>
+            </div>
+
+            <!-- Countdown Placeholder -->
+            <div class="mt-12 text-blue-200 font-mono text-sm uppercase tracking-widest">
+                Starts in: 52d 14h 40m
+            </div>
+        </div>
+
+        <!-- Fixed Floating Buttons -->
+        <div class="fixed bottom-8 right-8 z-50 flex flex-col gap-3">
+            <a href="#submit"
+                class="bg-brand-gold text-brand-blue font-bold py-3 px-6 rounded shadow-xl hover:bg-yellow-400 transition-all flex items-center gap-2">
+                <i class="fas fa-paper-plane"></i> Submit
+            </a>
+            <a href="#registration"
+                class="bg-brand-blue text-white font-bold py-3 px-6 rounded shadow-xl hover:bg-blue-900 transition-all flex items-center gap-2 border border-white/20">
+                <i class="fas fa-user-plus"></i> Register
+            </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-blue mb-4 uppercase tracking-wide">
+                    About</h2>
+                <div class="w-20 h-1 bg-brand-gold mx-auto"></div>
+            </div>
+
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-slate-800 mb-4">About the Conference</h3>
+                <p class="text-slate-600 leading-relaxed text-justify">
+                    International Conference on Emerging Quantum Computing and IoT Technologies for Intelligent Security
+                    (ICEQCIIS-2026) aims to bring together researchers, academicians, industry experts, and students
+                    from across the globe to exchange ideas, present research findings, and discuss emerging challenges
+                    and solutions in the areas of Quantum Computing, Internet of Things (IoT), and Intelligent Security
+                    Systems. The conference emphasizes multidisciplinary research, integrating engineering, sciences,
+                    healthcare, mathematics, and emerging technologies to address real-world security and communication
+                    challenges.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- KLEF -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <h3 class="text-xl font-bold text-brand-lightBlue mb-4">About KLEF</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed text-justify">
+                        Koneru Lakshmaiah Education Foundation (KLEF), also known as KL Deemed to be University, is a
+                        premier Category-1 deemed university in Andhra Pradesh, India established in 1980, and widely
+                        recognized for its excellence in engineering and technical education. In the NIRF 2025 rankings,
+                        KLEF secured the 26th position nationally. The university features a sprawling 100-acre "Green
+                        Fields" campus near Vijayawada. The Department of Internet of Things was started in the academic
+                        year 2021, with a well-equipped IoT, Embedded Systems Lab and Research and Development wing.
+                    </p>
+                </div>
+
+                <!-- INTI -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <h3 class="text-xl font-bold text-brand-lightBlue mb-4">About INTI International University</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed text-justify">
+                        INTI International University, established in 1986 and located in Nilai, Malaysia, is a premier
+                        private university recognized for high employability and international partnerships. It offers
+                        diverse programs in business, engineering, IT, and health sciences. Recognized as a 4-star
+                        institution in the 2022 QS World University Rankings for Asia. INTI emphasizes
+                        industry-relevant,
+                        technology-driven education with over 500 corporate partners.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conference Details Section -->
+    <section class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-24 mb-16">
+                <!-- Objectives -->
+                <div class="border-l-4 border-brand-gold pl-6">
+                    <h3 class="text-3xl font-bold text-slate-800 mb-8">Conference Objectives</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1.5 text-lg"></i>
+                            <span class="text-slate-700 font-medium text-lg">Promote research in quantum-enabled secure
+                                communication
+                                systems</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1.5 text-lg"></i>
+                            <span class="text-slate-700 font-medium text-lg">Explore secure and intelligent IoT
+                                architecture</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1.5 text-lg"></i>
+                            <span class="text-slate-700 font-medium text-lg">Address post-quantum cryptography and cyber
+                                security challenges</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1.5 text-lg"></i>
+                            <span class="text-slate-700 font-medium text-lg">Encourage multidisciplinary and
+                                collaborative research</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-600 mt-1.5 text-lg"></i>
+                            <span class="text-slate-700 font-medium text-lg">Foster academia-industry interaction at an
+                                international level</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Highlights -->
+                <div class="border-l-4 border-brand-blue pl-6">
+                    <h3 class="text-3xl font-bold text-slate-800 mb-8">Key Highlights</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-star text-yellow-400 mt-1.5 text-lg"></i>
+                            <span class="text-slate-700 font-medium text-lg">Keynote Talks by International
+                                Experts</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-star text-yellow-400 mt-1.5 text-lg"></i>
+                            <span class="text-slate-700 font-medium text-lg">Technical Paper Presentations</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-star text-yellow-400 mt-1.5 text-lg"></i>
+                            <span class="text-slate-700 font-medium text-lg">Industry Sessions & Panel
+                                Discussions</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-star text-yellow-400 mt-1.5 text-lg"></i>
+                            <span class="text-slate-700 font-medium text-lg">Best Paper Awards</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-star text-yellow-400 mt-1.5 text-lg"></i>
+                            <span class="text-slate-700 font-medium text-lg">Networking & Collaboration
+                                Opportunities</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Content Divider -->
+            <div class="border-t border-slate-200 my-12"></div>
+
+            <!-- Who Should Attend -->
+            <div class="text-center">
+                <h3 class="text-2xl font-bold text-slate-800 mb-6">Who Should Attend?</h3>
+                <p class="text-slate-600 text-lg font-medium leading-relaxed max-w-5xl mx-auto">
+                    Academicians, Researchers, Ph.D. Scholars, PG Students, Industry Professionals, Security Analysts,
+                    System Architects, Innovators, and Start-ups.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracks Section -->
+    <section id="tracks" class="py-20 bg-slate-50 relative">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-slate-800 mt-2 mb-4 uppercase tracking-wide">
+                    Conference Tracks</h2>
+                <div class="w-16 h-1 bg-brand-gold mx-auto mb-6"></div>
+                <p class="text-slate-600">Submissions are invited in the following tracks (but not limited to):</p>
+            </div>
+
+            <!-- Changed Grid to Flex for better centering of odd number of tracks -->
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Track 1 -->
+                <div
+                    class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all border border-slate-200 overflow-hidden w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
+                    <div class="bg-brand-blue/90 p-4">
+                        <h3 class="font-bold text-white text-lg">Track 1: Quantum Computing & Communication</h3>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> Quantum Algorithms
+                                and Architectures</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> Quantum Communication
+                                Networks</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> Quantum Key
+                                Distribution (QKD)</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> Post-Quantum
+                                Cryptography</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> Quantum Machine
+                                Learning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Track 2 -->
+                <div
+                    class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all border border-slate-200 overflow-hidden w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
+                    <div class="bg-brand-blue/90 p-4">
+                        <h3 class="font-bold text-white text-lg">Track 2: IoT & Smart Systems</h3>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-lightBlue mt-1 text-xs"></i> Secure IoT
+                                Architectures</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-lightBlue mt-1 text-xs"></i> Edge, Fog, and
+                                Cloud-IoT Integration</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-lightBlue mt-1 text-xs"></i> Industrial IoT
+                                (IIoT)</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-lightBlue mt-1 text-xs"></i> Smart Cities and
+                                Smart Infrastructure</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-lightBlue mt-1 text-xs"></i> Wearable and
+                                Healthcare IoT</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-lightBlue mt-1 text-xs"></i> Signal
+                                Processing for IoT</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Track 3 -->
+                <div
+                    class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all border border-slate-200 overflow-hidden w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
+                    <div class="bg-brand-blue/90 p-4">
+                        <h3 class="font-bold text-white text-lg">Track 3: AI & Intelligent Systems</h3>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> Machine learning for
+                                intelligent decision support</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> AI-driven anomaly and
+                                threat detection</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> Deep learning for IoT
+                                security</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> Cognitive computing
+                                and automation</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> AI in Bioinformatics
+                                & Semiconductor Devices</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> Natural Language
+                                Processing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Track 4 -->
+                <div
+                    class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all border border-slate-200 overflow-hidden w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
+                    <div class="bg-brand-blue/90 p-4">
+                        <h3 class="font-bold text-white text-lg">Track 4: Secure Communication</h3>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-lightBlue mt-1 text-xs"></i> Secure 5G/6G
+                                Networks</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-lightBlue mt-1 text-xs"></i> SDN Security
+                            </li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-lightBlue mt-1 text-xs"></i> Wireless Sensor
+                                Network Security</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-lightBlue mt-1 text-xs"></i> Quantum networks
+                                and communications</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-lightBlue mt-1 text-xs"></i> Cloud
+                                Communications
+                                and Networking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Track 5 -->
+                <div
+                    class="bg-white rounded-lg shadow-sm hover:shadow-lg transition-all border border-slate-200 overflow-hidden w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2rem)]">
+                    <div class="bg-brand-blue/90 p-4">
+                        <h3 class="font-bold text-white text-lg">Track 5: Math Foundations</h3>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> Applied Mathematics
+                                for Engineering</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> Cryptographic
+                                Algorithms</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> Optimization
+                                Techniques</li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> Statistical Modeling
+                            </li>
+                            <li class="flex items-start gap-2"><i
+                                    class="fas fa-chevron-right text-brand-gold mt-1 text-xs"></i> Graph Theory and
+                                Network Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Keynote Speakers -->
+    <!-- Keynote Speakers -->
+    <section id="speakers" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-blue mb-4 uppercase tracking-wide">
+                    Keynote Speakers</h2>
+                <div class="w-20 h-1 bg-brand-gold mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
+                <!-- Speaker 1 -->
+                <div class="bg-white rounded-xl shadow border border-slate-200 p-6 text-center cursor-pointer hover:shadow-xl transition-all transform hover:-translate-y-1"
+                    onclick="openModal('speaker1')">
+                    <div class="w-40 h-40 bg-slate-200 rounded-lg mx-auto mb-4 overflow-hidden">
+                        <img src="assets/Dr. Rajermani.jpg" alt="Dr. Rajermani" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800">Assoc. Prof. Ts. Dr. Rajermani Thinakaran</h3>
+                    <p class="text-xs text-brand-blue font-semibold uppercase mt-1">INTI International University</p>
+                </div>
+
+                <!-- Speaker 2 -->
+                <div class="bg-white rounded-xl shadow border border-slate-200 p-6 text-center cursor-pointer hover:shadow-xl transition-all transform hover:-translate-y-1"
+                    onclick="openModal('speaker2')">
+                    <div class="w-40 h-40 bg-slate-200 rounded-lg mx-auto mb-4 overflow-hidden">
+                        <img src="assets/BhuvaneshUnhelkar.jpeg" alt="Prof. Bhuvanesh Unhelkar"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800">Bhuvan UNHELKAR, PhD, FACS</h3>
+                    <p class="text-xs text-brand-blue font-semibold uppercase mt-1">University of South Florida, USA</p>
+                </div>
+
+                <!-- Speaker 3 -->
+                <div class="bg-white rounded-xl shadow border border-slate-200 p-6 text-center cursor-pointer hover:shadow-xl transition-all transform hover:-translate-y-1"
+                    onclick="openModal('speaker3')">
+                    <div
+                        class="w-40 h-40 bg-brand-dark/10 rounded-lg mx-auto mb-4 overflow-hidden flex items-center justify-center">
+                        <span class="text-4xl text-slate-400 font-serif">JS</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800">Prof. Dr. John Smith</h3>
+                    <p class="text-xs text-brand-blue font-semibold uppercase mt-1">Quantum Computing</p>
+                </div>
+
+                <!-- Speaker 4 -->
+                <div class="bg-white rounded-xl shadow border border-slate-200 p-6 text-center cursor-pointer hover:shadow-xl transition-all transform hover:-translate-y-1"
+                    onclick="openModal('speaker4')">
+                    <div class="w-40 h-40 bg-slate-200 rounded-lg mx-auto mb-4 overflow-hidden">
+                        <img src="assets/somasekar photo.jpeg" alt="Dr. J. Somasekar"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800">Dr. J. Somasekar</h3>
+                    <p class="text-xs text-brand-blue font-semibold uppercase mt-1">JAIN University, Bangalore / INTI
+                        International University, Malaysia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speaker Modal -->
+    <div id="speaker-modal" class="fixed inset-0 z-[60] hidden overflow-y-auto" aria-labelledby="modal-title"
+        role="dialog" aria-modal="true">
+        <!-- Background backdrop -->
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" onclick="closeModal()"></div>
+
+        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl">
+                <!-- Modal Body -->
+                <div class="bg-white pb-4">
+                    <!-- Header -->
+                    <div class="bg-brand-lightBlue px-6 py-4 flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-white" id="modal-title">Speaker Name</h3>
+                        <button type="button" class="text-white hover:text-gray-200 focus:outline-none"
+                            onclick="closeModal()">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+
+                    <div class="px-6 pt-5 pb-4">
+                        <h4 class="text-lg font-bold text-brand-lightBlue mb-4" id="modal-affiliation">University Name
+                        </h4>
+                        <div class="text-sm text-gray-600 space-y-4 text-justify leading-relaxed" id="modal-bio">
+                            <!-- Bio content will be injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Committee Section -->
+    <section id="committee" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-blue mb-4 uppercase tracking-wide">
+                    Committee</h2>
+                <div class="w-20 h-1 bg-brand-gold mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16">
+                <!-- Chief Patrons -->
+                <div>
+                    <h3 class="text-xl font-bold text-brand-blue mb-6 border-b pb-2">Chief Patrons</h3>
+                    <ul class="space-y-4 text-sm text-slate-700">
+                        <li><span class="font-bold text-brand-blue">Er. Koneru Satyanarayana</span>, President, KLEF
+                        </li>
+                        <li><span class="font-bold text-brand-blue">Er. Koneru Lakshman Havish</span>, Vice President,
+                            KLEF</li>
+                        <li><span class="font-bold text-brand-blue">Er. Koneru Raja Hareen</span>, Vice President, KLEF
+                        </li>
+                        <li><span class="font-bold text-brand-blue">Dr. Ts. Dr. Rajermani Thinakaran</span>, Assoc.
+                            Prof, INTI International University, Malaysia</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-brand-blue mb-6 border-b pb-2 mt-12">Conference Chair</h3>
+                    <ul class="space-y-4 text-sm text-slate-700">
+                        <li><span class="font-bold text-brand-blue">Dr. P. Satyanarayana</span>, Professor & HOD</li>
+                        <li><span class="font-bold text-brand-blue">Dr. PSG ArunaSri</span>, Professor</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-brand-blue mb-6 border-b pb-2 mt-12">Convenors</h3>
+                    <ul class="space-y-4 text-sm text-slate-700">
+                        <li><span class="font-bold text-brand-blue">Dr. K.V.D. Sagar</span>, Assoc. Professor (Convenor)
+                        </li>
+                        <li><span class="font-bold text-brand-blue">Dr. J.R.K Kumar Dabbakuti</span>, Assoc. Professor
+                            (Co-Convenor)</li>
+                    </ul>
+                </div>
+
+                <!-- Patrons -->
+                <div>
+                    <h3 class="text-xl font-bold text-brand-blue mb-6 border-b pb-2">Patrons</h3>
+                    <ul class="space-y-4 text-sm text-slate-700">
+                        <li><span class="font-bold text-brand-blue">Dr. K. Subbarao</span>, Registrar, KLEF</li>
+                        <li><span class="font-bold text-brand-blue">Dr. K. S. Jagannatha Rao</span>, Pro Chancellor,
+                            KLEF</li>
+                        <li><span class="font-bold text-brand-blue">Dr. G. P. Saradhi Varma</span>, Vice Chancellor,
+                            KLEF</li>
+                        <li><span class="font-bold text-brand-blue">Dr. A. V. S. Prasad</span>, Pro-Vice Chancellor-I,
+                            KLEF</li>
+                        <li><span class="font-bold text-brand-blue">Dr. N. Venkatram</span>, Pro-Vice Chancellor-II,
+                            KLEF</li>
+                        <li><span class="font-bold text-brand-blue">Dr. K. Rajasekhara Rao</span>, Pro-Vice
+                            Chancellor-II, KLEF</li>
+                        <li><span class="font-bold text-brand-blue">Dr. V. Rajesh</span>, Principal, KL College of
+                            Engineering, KLEF</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-brand-blue mb-6 border-b pb-2 mt-12">Advisory Committee</h3>
+                    <p class="text-slate-600 text-sm italic">Includes Directors, Deans, and HODs of KLEF departments.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Technical Program Committee -->
+            <div class="mt-20">
+                <div class="text-center mb-12">
+                    <h3 class="font-serif text-2xl font-bold text-brand-blue mb-4 uppercase tracking-wide">Technical
+                        Program Committee</h3>
+                    <div class="w-16 h-1 bg-brand-gold mx-auto"></div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-x-12 gap-y-4 max-w-5xl mx-auto text-sm text-slate-700">
+                    <ul class="space-y-3">
+                        <li><span class="font-bold text-slate-900">Prof Srikanth Narayanan</span>, USC, USA</li>
+                        <li><span class="font-bold text-slate-900">Dr. Divya Midhunchakkaravarthy</span>, Lincoln Univ,
+                            Malaysia</li>
+                        <li><span class="font-bold text-slate-900">Prof Paavo Alku</span>, Aalto University, Finland
+                        </li>
+                        <li><span class="font-bold text-slate-900">Dr. P. Rangababu</span>, IIITDM Kurnool</li>
+                        <li><span class="font-bold text-slate-900">Dr. E. Suresh Babu</span>, NIT Warangal</li>
+                        <li><span class="font-bold text-slate-900">Dr Sivanand Achanta</span>, Apple Inc, USA</li>
+                        <li><span class="font-bold text-slate-900">Dr Dhananjaya N Gowda</span>, Samsung Research, Korea
+                        </li>
+                        <li><span class="font-bold text-slate-900">Dr Shekhar Nayak</span>, Univ. of Groningen,
+                            Netherlands</li>
+                    </ul>
+                    <ul class="space-y-3">
+                        <li><span class="font-bold text-slate-900">Dr Hareesh Godaba</span>, Univ. of Sussex, UK</li>
+                        <li><span class="font-bold text-slate-900">Dr Anurag Kumar</span>, CMU, USA</li>
+                        <li><span class="font-bold text-slate-900">Dr Ghanshyam K</span>, Northeastern Univ, USA</li>
+                        <li><span class="font-bold text-slate-900">Dr Luca Remaggi</span>, Samsung Research, UK</li>
+                        <li><span class="font-bold text-slate-900">Dr. Mohamed Baza</span>, College of Charleston, USA
+                        </li>
+                        <li><span class="font-bold text-slate-900">Dr. Gautam Srivastava</span>, Brandon Univ, Canada
+                        </li>
+                        <li><span class="font-bold text-slate-900">Dr. Ahmed Nabih Zaki Rashed</span>, Menoufia Univ,
+                            Egypt</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call for Papers & Publication -->
+    <section id="cfp" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-blue mb-4 uppercase tracking-wide">Call
+                    for Papers & Publication</h2>
+                <div class="w-20 h-1 bg-brand-gold mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Submission Guidelines -->
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">Submission Guidelines</h3>
+                    <ul class="space-y-4 text-slate-600 mb-8 border-t pt-6">
+                        <li class="flex items-start gap-2">
+                            <div class="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2"></div> Experimental investigation
+                            with specific conclusions
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <div class="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2"></div> Original contribution, not
+                            published earlier
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <div class="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2"></div> Plagiarism should be less
+                            than 10% (Turnitin)
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <div class="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2"></div> Maximum authors: 4
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <div class="w-1.5 h-1.5 bg-brand-gold rounded-full mt-2"></div> At least one author must
+                            register to present
+                        </li>
+                    </ul>
+
+                    <div class="bg-blue-50 border-l-4 border-brand-lightBlue p-4 rounded-r-lg">
+                        <p class="text-sm text-brand-blue">
+                            <span class="font-bold">Format:</span> Times New Roman, 12pt, 1.5 spacing. Margins: Left
+                            1.5", others 1.0". Abstract 11pt Italic.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Publication -->
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">Publication</h3>
+                    <p class="text-slate-600 mb-6">
+                        Accepted papers will be published in conference proceedings. Selected high-quality papers will
+                        be invited for extension in:
+                    </p>
+                    <ul class="space-y-4 text-slate-700 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span><span class="font-bold">PERTANIKA Journal of Science and Technology</span> (Scopus
+                                Q2)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span><span class="font-bold">International Journal of Advances in Signal and Image
+                                    Sciences</span> (Scopus Q1)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Other Scopus/WoS Journals: AIMS Agriculture, World Journal of Engineering, Millennial
+                                Asia, etc.</span>
+                        </li>
+                    </ul>
+
+                    <a href="#"
+                        class="inline-block bg-brand-blue text-white font-bold py-3 px-8 rounded shadow-lg hover:bg-blue-900 transition-all">
+                        Submit via CMT
+                    </a>
+                    <div
+                        class="mt-6 text-sm text-slate-500 italic leading-relaxed bg-brand-blue/5 p-4 rounded border border-brand-blue/10">
+                        "The Microsoft CMT service was used for managing the peer-reviewing process for this conference.
+                        This service was provided for free by Microsoft and they bore all expenses, including costs for
+                        Azure cloud services as well as for software development and support."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Dates -->
+    <section id="dates" class="py-24 bg-brand-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-center mb-16">Important Dates</h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Date Item -->
+                <div
+                    class="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-lg text-center hover:bg-white/10 transition-colors">
+                    <div class="text-brand-gold font-bold text-lg mb-2">10 Mar 2026</div>
+                    <div class="text-slate-300 text-sm uppercase tracking-wider">Paper Submission</div>
+                </div>
+
+                <div
+                    class="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-lg text-center hover:bg-white/10 transition-colors">
+                    <div class="text-brand-gold font-bold text-lg mb-2">15 Mar 2026</div>
+                    <div class="text-slate-300 text-sm uppercase tracking-wider">Acceptance Notification</div>
+                </div>
+
+                <div
+                    class="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-lg text-center hover:bg-white/10 transition-colors">
+                    <div class="text-brand-gold font-bold text-lg mb-2">15 Mar 2026</div>
+                    <div class="text-slate-300 text-sm uppercase tracking-wider">Registration Deadline</div>
+                </div>
+
+                <div
+                    class="bg-gradient-to-br from-brand-blue to-blue-700 p-6 rounded-lg text-center shadow-lg transform md:-translate-y-2 border border-blue-500">
+                    <div class="text-white font-bold text-lg mb-2">9-10 Apr 2026</div>
+                    <div class="text-blue-200 text-sm uppercase tracking-wider font-bold">Conference Date</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration -->
+    <section id="registration" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-blue mb-4">Registration Fees</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">Early bird registration is recommended. Fee includes
+                    conference kit, lunch, and access to all sessions.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead class="bg-slate-50 border-b border-slate-200">
+                            <tr>
+                                <th class="p-6 font-bold text-brand-blue">Category</th>
+                                <th class="p-6 font-bold text-brand-blue">National (INR)</th>
+                                <th class="p-6 font-bold text-brand-blue">International (USD)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-6 font-medium text-slate-700">UG/PG Students</td>
+                                <td class="p-6 text-slate-600">
+                                    <span class="block text-xs text-slate-400 uppercase">Offline / Online</span>
+                                    ₹ 1500 / ₹ 1000
+                                </td>
+                                <td class="p-6 text-slate-600">
+                                    <span class="block text-xs text-slate-400 uppercase">Offline / Online</span>
+                                    $ 16 / $ 10
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-6 font-medium text-slate-700">Faculty / Research Scholars</td>
+                                <td class="p-6 text-slate-600">
+                                    <span class="block text-xs text-slate-400 uppercase">Offline / Online</span>
+                                    ₹ 2000 / ₹ 1200
+                                </td>
+                                <td class="p-6 text-slate-600">
+                                    <span class="block text-xs text-slate-400 uppercase">Offline / Online</span>
+                                    $ 22 / $ 15
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="p-6 font-medium text-slate-700">Industry Delegates</td>
+                                <td class="p-6 text-slate-600">
+                                    <span class="block text-xs text-slate-400 uppercase">Offline / Online</span>
+                                    ₹ 3000 / ₹ 2000
+                                </td>
+                                <td class="p-6 text-slate-600">
+                                    <span class="block text-xs text-slate-400 uppercase">Offline / Online</span>
+                                    $ 50 / $ 40
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Payment Details -->
+                <div class="mt-16 max-w-4xl mx-auto">
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-center mb-8">
+                        <span class="text-yellow-800 font-bold">Discounts:</span> <span class="text-slate-700">IEEE
+                            Members 10% | Other Professional Societies 5%</span>
+                    </div>
+
+                    <div class="border-2 border-brand-blue rounded-xl overflow-hidden shadow-lg">
+                        <div class="bg-brand-blue py-4 px-6 text-center">
+                            <h3 class="text-white font-bold text-xl">Payment Details</h3>
+                        </div>
+                        <div class="bg-white p-8 grid md:grid-cols-2 gap-6 text-slate-700">
+                            <div>
+                                <p class="mb-2"><span class="font-bold">Bank Name:</span> State Bank of India</p>
+                                <p class="mb-2"><span class="font-bold">Account Name:</span> KL University</p>
+                                <p><span class="font-bold">Account No:</span> 62434363674</p>
+                            </div>
+                            <div>
+                                <p class="mb-2"><span class="font-bold">IFSC Code:</span> SBIN0021361</p>
+                                <p><span class="font-bold">Branch:</span> Vaddeswaram, Guntur-522 302</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="#registration"
+                    class="inline-block bg-brand-blue text-white font-bold py-3 px-10 rounded shadow-lg hover:bg-blue-900 transition-all">
+                    Register Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-900 text-slate-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <h3 class="font-serif text-2xl font-bold text-white mb-6">ICEQCIIS-2026</h3>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        International Conference on Emerging Quantum Computing and IoT Technologies for Intelligent
+                        Security.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="h-10 w-10 bg-slate-800 rounded flex items-center justify-center hover:bg-brand-blue hover:text-white transition-all"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#"
+                            class="h-10 w-10 bg-slate-800 rounded flex items-center justify-center hover:bg-brand-blue hover:text-white transition-all"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="h-10 w-10 bg-slate-800 rounded flex items-center justify-center hover:bg-brand-blue hover:text-white transition-all"><i
+                                class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-6">Contact Us</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-user mt-1 text-brand-gold"></i>
+                            <div>
+                                <p class="font-semibold text-white">Dr. K.V.D. Sagar</p>
+                                <p class="text-xs text-slate-500">Convener</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-envelope mt-1 text-brand-gold"></i>
+                            <a href="mailto:sagar.tadepalli@kluniversity.in"
+                                class="hover:text-white transition-colors">sagar.tadepalli@kluniversity.in</a>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-phone mt-1 text-brand-gold"></i>
+                            <p>+91-9885182669</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-brand-gold transition-colors flex items-center gap-2"><i
+                                    class="fas fa-angle-right text-xs"></i> Submit Paper (CMT)</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors flex items-center gap-2"><i
+                                    class="fas fa-angle-right text-xs"></i> Download Brochure</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors flex items-center gap-2"><i
+                                    class="fas fa-angle-right text-xs"></i> Sponsorship Opportunities</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition-colors flex items-center gap-2"><i
+                                    class="fas fa-angle-right text-xs"></i> KL University Website</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+                <p>&copy; 2026 ICEQCIIS. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Speaker Data
+        const speakers = {
+            'speaker1': {
+                name: 'Assoc. Prof. Ts. Dr. Rajermani Thinakaran',
+                affiliation: 'INTI International University, Malaysia',
+                bio: `Assoc. Prof. Ts. Dr. Rajermani Thinakaran is affiliated with the Faculty of Data Science and Information Technology at INTI International University, Negeri Sembilan, Malaysia. As head of the Knowledge and Technology research cluster, she is involved in research and publication, collaborating with local and international researchers. Her research spans several key areas, including Artificial Intelligence, Assistive Technology, eLearning, and gaming, focusing on theory, design, implementation, and sustainability.`
+            },
+            'speaker2': {
+                name: 'Bhuvan UNHELKAR, PhD, FACS',
+                affiliation: 'University of South Florida, USA',
+                bio: `Bhuvan Unhelkar is a Professor of information technology in the School of Information Systems, Muma College of Business in Sarasota-Manatee campus. His research focuses on big data strategies/AI, Agile processes and their application in practice. He teaches IT and Project Management courses at undergraduate and graduate level.<br><br>He holds certifications as Business Analysis (CBAP), Professional Scrum Master (PSM), Software Quality Assurance and Training & Assessment/Education. He has written or co-written 27 books, chapters and research articles for numerous publications including the Cutter Business Technology Journal, the Scandinavian Journal of Information Systems, the Journal of Information Technology & Tourism, the International Journal of Mobile & Adhoc Network and the Global Journal of Finance and Management.<br><br>Unhelkar earned his PhD and Master's degree from the University of Technology, Sydney; MDBA from Pune and his Bachelor in Electronic Engineering from the M.S. University of Baroda.`
+            },
+            'speaker3': {
+                name: 'Prof. Dr. John Smith',
+                affiliation: 'University of Technology, USA',
+                bio: `International expert in Quantum Computing and Secure Systems.`
+            },
+            'speaker4': {
+                name: 'Dr. J. Somasekar',
+                affiliation: 'JAIN University, Bangalore',
+                bio: `Dr. J. Somasekar is a Professor and Program Head of CSE (AIDD) at JAIN University, Bangalore, and a Research Fellow at INTI International University, Malaysia, also serving remotely as Head of AI & Data Science at the University of DAIM, USA. He holds a Ph.D. from JNTUA, an M.Tech. from NIT Karnataka, and completed postdoctoral research at the University of South Florida. With over 18 years of teaching experience, he has delivered 270+ keynote and invited talks across 13 countries, published 50+ research papers, authored three books, and guided multiple PhD scholars. He secured All-India Rank 43 in GATE and received the prestigious DST International Travel Grant to serve as an IEEE Keynote Speaker in Egypt. His awards include the ‘Innovative Collaborative Researcher’ Award (Medical Imaging), the 2025 ‘Global Academic Excellence’ Award, Best Outstanding Speaker Award, and multiple Best Paper Awards at international conferences.`
+            }
+        };
+
+        function openModal(speakerId) {
+            const data = speakers[speakerId];
+            if (data) {
+                document.getElementById('modal-title').textContent = data.name;
+                document.getElementById('modal-affiliation').textContent = data.affiliation;
+                document.getElementById('modal-bio').textContent = data.bio;
+                document.getElementById('speaker-modal').classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('speaker-modal').classList.add('hidden');
+            document.body.style.overflow = ''; // Restore background scrolling
+        }
+    </script>
+</body>
+
+</html>
