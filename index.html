@@ -175,7 +175,8 @@
                 </a>
             </div>
 
-            <div class="mt-12 text-brand-cyan font-mono text-sm uppercase tracking-widest shadow-black drop-shadow-md">
+            <div id="countdown-timer"
+                class="mt-12 text-brand-cyan font-mono text-sm uppercase tracking-widest shadow-black drop-shadow-md">
                 Starts in: 52d 14h 40m
             </div>
         </div>
@@ -982,6 +983,10 @@
     <script>
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
+        const countdown_timer = document.getElementById('countdown-timer');
+        // 9th april 2026
+        const targetDate = new Date("04-09-2026");
+        // alert(targetDate)
 
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
@@ -1026,6 +1031,20 @@
             document.getElementById('speaker-modal').classList.add('hidden');
             document.body.style.overflow = ''; // Restore background scrolling
         }
+
+        function countDownTimer() {
+            const now = new Date();
+            const diff = targetDate - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            countdown_timer.textContent = `Starts in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        setInterval(countDownTimer, 100);
+
+
     </script>
 </body>
 
