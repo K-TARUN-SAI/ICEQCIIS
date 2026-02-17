@@ -79,12 +79,18 @@
 <body class="text-slate-800 font-sans antialiased selection:bg-brand-cyan selection:text-brand-darkBlue"
     style="background-image: url('assets/image.png'); background-size: cover; background-attachment: fixed; background-position: center; background-color: #050914;">
 
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Top Banner -->
+    <div class="relative w-full z-50 bg-white h-auto">
+        <img src="assets/klbanner.png" alt="Header Banner" class="w-full h-auto object-cover object-top">
+    </div>
+
+    <nav class="sticky top-0 w-full z-50 glass-nav transition-all duration-300">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <span
-                        class="font-serif font-bold text-xl text-white tracking-tight ml-2 drop-shadow-md">ICEQCIIS-2026</span>
+                    <div class="bg-white/90 rounded-md px-1 py-1">
+                        <img src="assets/IntiMain.png" alt="INTI Logo" class="h-16 w-auto object-contain">
+                    </div>
                 </div>
 
                 <div class="hidden lg:flex items-center space-x-8">
@@ -139,19 +145,12 @@
         </div>
     </nav>
 
-    <header id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <header id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
+        style="background-image: url('assets/image.png'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 z-0 hero-overlay"></div>
 
         <div class="relative z-10 max-w-6xl mx-auto px-4 text-center text-white mt-8">
-            <div class="flex justify-center items-center gap-8 mb-10">
-                <div
-                    class="bg-white backdrop-blur-sm p-4 rounded-xl border border-white/20 inline-flex gap-8 items-center shadow-lg">
-                    <img src="assets/KLEF.png" alt="KLEF Logo"
-                        class="w-32 md:w-56 h-auto object-contain filter drop-shadow-lg">
-                    <img src="assets/IntiMain.png" alt="INTI Logo"
-                        class="w-40 md:w-80 h-auto object-contain filter drop-shadow-lg">
-                </div>
-            </div>
+
 
             <h1 class="font-serif text-4xl md:text-6xl font-bold mb-4 leading-tight text-shadow tracking-tight">
                 ICEQCIIS-2026
@@ -210,20 +209,8 @@
                 <div class="w-20 h-1 bg-brand-gold mx-auto"></div>
             </div>
 
-            <div class="mb-16">
-                <h3 class="text-2xl font-bold text-slate-800 mb-4">About the Conference</h3>
-                <p class="text-slate-600 leading-relaxed text-justify">
-                    International Conference on Emerging Quantum Computing and IoT Technologies for Intelligent Security
-                    (ICEQCIIS-2026) aims to bring together researchers, academicians, industry experts, and students
-                    from across the globe to exchange ideas, present research findings, and discuss emerging challenges
-                    and solutions in the areas of Quantum Computing, Internet of Things (IoT), and Intelligent Security
-                    Systems. The conference emphasizes multidisciplinary research, integrating engineering, sciences,
-                    healthcare, mathematics, and emerging technologies to address real-world security and communication
-                    challenges.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <!-- 1. About KLEF -->
                 <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
                     <h3 class="text-xl font-bold text-brand-lightBlue mb-4">About KLEF</h3>
                     <p class="text-slate-600 text-sm leading-relaxed text-justify">
@@ -236,6 +223,7 @@
                     </p>
                 </div>
 
+                <!-- 2. About INTI -->
                 <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
                     <h3 class="text-xl font-bold text-brand-lightBlue mb-4">About INTI International University</h3>
                     <p class="text-slate-600 text-sm leading-relaxed text-justify">
@@ -245,6 +233,43 @@
                         institution in the 2022 QS World University Rankings for Asia. INTI emphasizes
                         industry-relevant,
                         technology-driven education with over 500 corporate partners.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 3. About IoT Department -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <h3 class="text-xl font-bold text-brand-lightBlue mb-4">About IoT Department</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed text-justify">
+                        The Department of Internet of Things (IoT) at KLEF is a forward-looking hub established to drive
+                        innovation in next-generation technologies. As the world shifts from traditional internet usage
+                        to smart, connected ecosystems. IoT is transforming homes, industries, cities, and
+                        transportation. Our program integrates futuristic domains including AI, Cybersecurity, Embedded
+                        Systems, Cloud Computing, and Full-Stack IoT Development. Students gain hands-on expertise to
+                        design intelligent, secure, and scalable solutions for real-world applications across diverse
+                        sectors. With strong industry collaboration, state-of-the-art labs, and project-based learning,
+                        the department prepares graduates for high-impact careers. Established in 2021, the IoT
+                        Department continues to lead KLEF's mission of shaping future-ready technology professionals.
+                    </p>
+                </div>
+
+                <!-- 4. About Conference -->
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                    <h3 class="text-xl font-bold text-brand-lightBlue mb-4">About the Conference</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed text-justify">
+                        International Conference on Emerging Quantum Computing and IoT Technologies for Intelligent
+                        Security
+                        (ICEQCIIS-2026) aims to bring together researchers, academicians, industry experts, and students
+                        from across the globe to exchange ideas, present research findings, and discuss emerging
+                        challenges
+                        and solutions in the areas of Quantum Computing, Internet of Things (IoT), and Intelligent
+                        Security
+                        Systems. The conference emphasizes multidisciplinary research, integrating engineering,
+                        sciences,
+                        healthcare, mathematics, and emerging technologies to address real-world security and
+                        communication
+                        challenges.
                     </p>
                 </div>
             </div>
@@ -545,9 +570,9 @@
 
                 <div class="bg-white rounded-xl shadow border border-slate-200 p-6 text-center cursor-pointer hover:shadow-xl transition-all transform hover:-translate-y-1"
                     onclick="openModal('speaker3')">
-                    <div
-                        class="w-40 h-40 bg-brand-dark/10 rounded-lg mx-auto mb-4 overflow-hidden flex items-center justify-center">
-                        <span class="text-4xl text-slate-400 font-serif">JS</span>
+                    <div class="w-40 h-40 bg-slate-200 rounded-lg mx-auto mb-4 overflow-hidden">
+                        <img src="assets/John Smith .jpeg" alt="Prof. Dr. John Smith"
+                            class="w-full h-full object-cover">
                     </div>
                     <h3 class="font-bold text-lg text-slate-800">Prof. Dr. John Smith</h3>
                     <p class="text-xs text-brand-blue font-semibold uppercase mt-1">Quantum Computing</p>
@@ -607,10 +632,18 @@
                         </li>
                         <li><span class="font-bold text-brand-blue">Dr. J.R.K Kumar Dabbakuti</span>, Assoc. Professor
                             (Co-Convenor)</li>
+                        <li><span class="font-bold text-brand-blue">Dr. KTPS Kumar</span>, (Co-Convenor)</li>
                     </ul>
 
                     <h3 class="text-xl font-bold text-brand-blue mb-6 border-b pb-2 mt-12">Organizing Committee</h3>
-                    <p class="text-slate-600 text-sm">All Faculty Members of IoT</p>
+                    <ul class="space-y-4 text-sm text-slate-700">
+                        <li><span class="font-bold text-brand-blue">Dr. Ch. Bhupati</span></li>
+                        <li><span class="font-bold text-brand-blue">Dr. Sala Surekha</span></li>
+                        <li><span class="font-bold text-brand-blue">Mr. Aditya Ankanna</span></li>
+                        <li><span class="font-bold text-brand-blue">Dr. P. Eswar</span></li>
+                        <li><span class="font-bold text-brand-blue">Dr. S. Sridevi</span></li>
+                        <li><span class="font-bold text-brand-blue">Dr. J. Rajasekhar</span></li>
+                    </ul>
                 </div>
 
                 <div>
@@ -647,6 +680,9 @@
                         <li><span class="font-bold text-brand-blue">Dr. V.S.V Prabakar</span>, Professor & HoD AIDS</li>
                         <li><span class="font-bold text-brand-blue">Dr. V. Viswanath Shenoi</span>, Professor & HoD HTR
                         </li>
+                        <li><span class="font-bold text-brand-blue">Dr. NVK Ramesh</span></li>
+                        <li><span class="font-bold text-brand-blue">Dr. M. Kameswara Rao</span></li>
+                        <li><span class="font-bold text-brand-blue">Dr. Md. Ali Hussain</span></li>
                     </ul>
                     <p class="text-slate-600 text-sm italic mt-4">Includes Directors, Deans, and HODs of KLEF
                         departments.</p>
@@ -661,6 +697,12 @@
                 </div>
                 <div class="grid md:grid-cols-2 gap-x-12 gap-y-4 max-w-5xl mx-auto text-sm text-slate-700">
                     <ul class="space-y-3">
+                        <li><span class="font-bold text-slate-900">Dr. M. Kavitha</span>, Assoc Professor & Dean
+                            Academics, KLEF</li>
+                        <li><span class="font-bold text-slate-900">Dr. M. Praveena</span>, Asst. Professor & AI cohort
+                            professor in charge, KLEF</li>
+                        <li><span class="font-bold text-slate-900">Dr. J. Ravi Kumar</span>, Professor, NIT Warangal
+                        </li>
                         <li><span class="font-bold text-slate-900">Prof Srikanth Narayanan</span>, USC, USA</li>
                         <li><span class="font-bold text-slate-900">Dr. Divya Midhunchakkaravarthy</span>, Lincoln Univ,
                             Malaysia</li>
