@@ -1,0 +1,248 @@
+:root {
+    --brand-blue: #1e3a8a;
+    --brand-darkBlue: #0a0f23;
+    --brand-lightBlue: #3b82f6;
+    --brand-cyan: #00F0FF;
+    --brand-gold: #fbbf24;
+    --brand-dark: #0f172a;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    background-image: url('image.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #050914;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background-color: var(--brand-cyan);
+    color: var(--brand-darkBlue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Custom Glassmorphism for Navbar */
+.glass-nav {
+    background: rgba(10, 15, 35, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient for Hero Overlay to ensure text readability on complex backgrounds */
+.hero-overlay {
+    background: linear-gradient(180deg, rgba(10, 15, 35, 0.3) 0%, rgba(10, 15, 35, 0.8) 100%);
+}
+
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.neon-glow:hover {
+    color: var(--brand-cyan) !important;
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fadeInScale {
+    animation: fadeInScale 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Generic Utility Replacements */
+.text-brand-blue {
+    color: var(--brand-blue) !important;
+}
+
+.text-brand-darkBlue {
+    color: var(--brand-darkBlue) !important;
+}
+
+.text-brand-lightBlue {
+    color: var(--brand-lightBlue) !important;
+}
+
+.text-brand-cyan {
+    color: var(--brand-cyan) !important;
+}
+
+.text-brand-gold {
+    color: var(--brand-gold) !important;
+}
+
+.bg-brand-blue {
+    background-color: var(--brand-blue) !important;
+}
+
+.bg-brand-darkBlue {
+    background-color: var(--brand-darkBlue) !important;
+}
+
+.bg-brand-cyan {
+    background-color: var(--brand-cyan) !important;
+}
+
+.bg-brand-gold {
+    background-color: var(--brand-gold) !important;
+}
+
+.border-brand-gold {
+    border-color: var(--brand-gold) !important;
+}
+
+.border-brand-cyan {
+    border-color: var(--brand-cyan) !important;
+}
+
+.border-brand-blue {
+    border-color: var(--brand-blue) !important;
+}
+
+.hover-bg-yellow-400:hover {
+    background-color: #facc15 !important;
+}
+
+.hover-bg-cyan-400:hover {
+    background-color: #22d3ee !important;
+}
+
+.hover-bg-slate-700:hover {
+    background-color: #334155 !important;
+}
+
+.hover--translate-y-1:hover {
+    transform: translateY(-0.25rem) !important;
+}
+
+/* Miscellaneous specific Tailwind ports */
+.tracking-wider {
+    letter-spacing: 0.05em !important;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.whitespace-nowrap {
+    white-space: nowrap !important;
+}
+
+.shadow-lg-custom {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Navigation Custom Styles */
+.nav-link-custom {
+    color: #e2e8f0;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover {
+    color: var(--brand-cyan);
+}
+
+
+
+.btn-nav-custom {
+    color: #e2e8f0;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    transition: color 0.3s ease;
+}
+
+.btn-nav-custom:hover {
+    color: var(--brand-cyan);
+}
+
+.mobile-nav-link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+    color: var(--brand-cyan);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-btn-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: transparent;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.mobile-btn-link:hover {
+    color: var(--brand-cyan);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Always keep floating action buttons visible on all pages */
+#floating-actions {
+    display: flex !important;
+    position: fixed !important;
+    bottom: 1.5rem !important;
+    right: 1.5rem !important;
+    z-index: 9999 !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    gap: 0.75rem !important;
+}

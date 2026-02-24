@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICEQCIIS-2026 | International Conference on Emerging Quantum Computing & IoT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="antialiased"
+    style="background-image: url('assets/image.png'); background-size: cover; background-attachment: fixed; background-position: center; background-color: #050914;">
+
+    <!-- Top Banner -->
+    <div class="relative w-full z-50 bg-white h-auto">
+        <img src="assets/klbanner.png" alt="Header Banner" class="w-full h-auto object-cover object-top">
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top w-100 z-50 glass-nav transition-all duration-300 py-2">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand d-flex align-items-center gap-3 cursor-pointer p-0" href="index.html"
+                onclick="window.location.hash=''">
+                <div class="bg-white bg-opacity-90 rounded p-1">
+                    <img src="assets/IntiMain.png" alt="INTI Logo"
+                        style="height: 4rem; width: auto; object-fit: contain;">
+                </div>
+            </a>
+
+            <button class="navbar-toggler border-0 shadow-none text-white focus-outline-none" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars fs-2 hover-text-brand-cyan transition-colors"></i>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                <!-- Desktop nav items (Single Row) -->
+                <div class="d-none d-lg-flex justify-content-center align-items-center flex-wrap w-100 py-2" style="column-gap: 2rem; row-gap: 0.5rem;">
+                    <a href="index.html" class="nav-link-custom neon-glow">HOME</a>
+                    <a href="about.html" class="nav-link-custom neon-glow">ABOUT</a>
+                    <a href="committee.html" class="nav-link-custom neon-glow">COMMITTEES</a>
+                    <a href="cfp.html" class="nav-link-custom neon-glow">AUTHORS GUIDELINES</a>
+                    <a href="registration.html" class="nav-link-custom neon-glow">REGISTRATION</a>
+                    <a href="contact.html" class="nav-link-custom neon-glow">CONTACT US</a>
+                    <button onclick="openBrochureModal()"
+                            class="btn-nav-custom neon-glow cursor-pointer">BROCHURE</button>
+                    <button onclick="openAckModal()" class="btn-nav-custom neon-glow cursor-pointer">CMT
+                            ACKNOWLEDGEMENT</button>
+                </div>
+
+                <!-- Mobile nav items (1 column) -->
+                <div class="d-lg-none d-flex flex-column w-100 mt-3 pt-2"
+                    style="background: rgba(10, 15, 35, 0.95); backdrop-filter: blur(16px); border-top: 1px solid rgba(255,255,255,0.1); border-radius: 0.5rem; padding: 0.5rem;">
+                    <a href="index.html" class="mobile-nav-link">HOME</a>
+                    <a href="about.html" class="mobile-nav-link">ABOUT</a>
+                    <a href="speakers.html" class="mobile-nav-link">KEYNOTE SPEAKERS</a>
+                    <a href="tracks.html" class="mobile-nav-link">TRACKS</a>
+                    <a href="committee.html" class="mobile-nav-link">COMMITTEES</a>
+                    <a href="cfp.html" class="mobile-nav-link">AUTHORS GUIDELINES</a>
+                    <a href="dates.html" class="mobile-nav-link">DATES</a>
+                    <a href="registration.html" class="mobile-nav-link">REGISTRATION</a>
+                    <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+                    <button onclick="openBrochureModal()" class="mobile-btn-link">BROCHURE</button>
+                    <button onclick="openAckModal()" class="mobile-btn-link">CMT ACKNOWLEDGEMENT</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<section id="cfp" class="py-5 bg-white">
+        <div class="container px-4 px-md-5">
+            <div class="text-center mb-5">
+                <h2 class="font-serif fs-2 fw-bold text-brand-blue mb-3 text-uppercase" style="letter-spacing: 0.05em;">
+                    Call
+                    for Papers & Publication</h2>
+                <div class="mx-auto bg-brand-gold" style="width: 5rem; height: 0.25rem;"></div>
+            </div>
+
+            <div class="row g-5 mb-5">
+                <div class="col-md-6">
+                    <h3 class="fs-4 fw-bold text-dark mb-4">Submission Guidelines</h3>
+                    <ul class="list-unstyled d-flex flex-column gap-3 text-secondary mb-4 border-top pt-4">
+                        <li class="d-flex align-items-start gap-2">
+                            <div class="rounded-circle bg-brand-gold mt-2 flex-shrink-0"
+                                style="width: 0.375rem; height: 0.375rem;"></div> Experimental investigation
+                            with specific conclusions
+                        </li>
+                        <li class="d-flex align-items-start gap-2">
+                            <div class="rounded-circle bg-brand-gold mt-2 flex-shrink-0"
+                                style="width: 0.375rem; height: 0.375rem;"></div> Original contribution, not
+                            published earlier
+                        </li>
+                        <li class="d-flex align-items-start gap-2">
+                            <div class="rounded-circle bg-brand-gold mt-2 flex-shrink-0"
+                                style="width: 0.375rem; height: 0.375rem;"></div> Plagiarism should be less
+                            than 10% (Turnitin)
+                        </li>
+                        <li class="d-flex align-items-start gap-2">
+                            <div class="rounded-circle bg-brand-gold mt-2 flex-shrink-0"
+                                style="width: 0.375rem; height: 0.375rem;"></div> Maximum authors: 4
+                        </li>
+                        <li class="d-flex align-items-start gap-2">
+                            <div class="rounded-circle bg-brand-gold mt-2 flex-shrink-0"
+                                style="width: 0.375rem; height: 0.375rem;"></div> At least one author must
+                            register to present
+                        </li>
+                    </ul>
+
+                    <div class="bg-light border-start border-4 border-info p-3 rounded-end"
+                        style="border-color: var(--brand-lightBlue) !important;">
+                        <p class="small text-brand-blue mb-0">
+                            <span class="fw-bold">Format:</span> Times New Roman, 12pt, 1.5 spacing. Margins: Left
+                            1.5", others 1.0". Abstract 11pt Italic.
+                        </p>
+                    </div>
+
+                    <div class="mt-4 pt-2">
+                        <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2F" id="submit-cmt"
+                            target="_blank" class="btn text-white fw-bold py-3 px-5 rounded-3 shadow-sm transition-all"
+                            style="background-color: var(--brand-blue);">
+                            Submit via Microsoft CMT
+                        </a>
+                        <div class="mt-4 small text-secondary fst-italic lh-lg p-3 rounded border"
+                            style="background-color: rgba(30,58,138,0.05); border-color: rgba(30,58,138,0.1);">
+                            "The Microsoft CMT service was used for managing the peer-reviewing process for this
+                            conference.
+                            This service was provided for free by Microsoft and they bore all expenses, including costs
+                            for
+                            Azure cloud services as well as for software development and support."
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h3 class="fs-4 fw-bold text-dark mb-4">Publication & Indexing</h3>
+                    <p class="text-secondary lh-lg mb-4 border-top pt-4">
+                        All accepted and presented papers will be published in Scopus Indexed Proceedings/Journals.
+                    </p>
+
+                    <div class="bg-light p-4 rounded-3 border border-light mb-4">
+                        <h4 class="fw-bold text-brand-blue mb-3 fs-5">Publishing Partners</h4>
+                        <ul class="list-unstyled d-flex flex-column gap-3 text-secondary mb-0">
+                            <li class="d-flex align-items-start gap-3">
+                                <i class="fas fa-check-circle text-success mt-1"></i>
+                                <span><span class="fw-bold text-dark">International Journal of Advanced Computer Science
+                                        &
+                                        Applications</span></span>
+                            </li>
+                            <li class="d-flex align-items-start gap-3">
+                                <i class="fas fa-check-circle text-success mt-1"></i>
+                                <span><span class="fw-bold text-dark">Journal of Applied Data Sciences</span></span>
+                            </li>
+                            <li class="d-flex align-items-start gap-3">
+                                <i class="fas fa-check-circle text-success mt-1"></i>
+                                <span><span class="fw-bold text-dark">Pertanika Journal of Social Science and
+                                        Humanities</span>
+                                    (Indexed in Scopus, ABDC, SSCI; Q2)</span>
+                            </li>
+                            <li class="d-flex align-items-start gap-3">
+                                <i class="fas fa-check-circle text-success mt-1"></i>
+                                <span><span class="fw-bold text-dark">Mathematical Modelling of Engineering
+                                        Problems</span>
+                                    (Scopus
+                                    Q3)</span>
+                            </li>
+                            <li class="d-flex align-items-start gap-3">
+                                <i class="fas fa-check-circle text-success mt-1"></i>
+                                <span><span class="fw-bold text-dark">International Journal of Technology
+                                        (IJTech)</span>
+                                    (Scopus Q2
+                                    & ESI)</span>
+                            </li>
+                            <li class="d-flex align-items-start gap-3">
+                                <i class="fas fa-check-circle text-success mt-1"></i>
+                                <span><span class="fw-bold text-dark">PERTANIKA Journal of Science and Technology</span>
+                                    (Scopus
+                                    Q2)</span>
+                            </li>
+                            <li class="d-flex align-items-start gap-3">
+                                <i class="fas fa-check-circle text-success mt-1"></i>
+                                <span><span class="fw-bold text-dark">International Journal of Advances in Signal and
+                                        Image
+                                        Sciences</span> (Scopus Q1)</span>
+                            </li>
+                            <li class="d-flex flex-column gap-2">
+                                <div class="d-flex align-items-start gap-3">
+                                    <i class="fas fa-check-circle text-success mt-1"></i>
+                                    <span class="fw-bold text-dark">Other Scopus/WoS Journals:</span>
+                                </div>
+                                <ul class="list-unstyled ms-5 text-secondary d-flex flex-column gap-1 small">
+                                    <li><i class="fas fa-circle ms-1 me-2" style="font-size: 0.35rem"></i>AIMS
+                                        Agriculture</li>
+                                    <li><i class="fas fa-circle ms-1 me-2" style="font-size: 0.35rem"></i>World Journal
+                                        of Engineering</li>
+                                    <li><i class="fas fa-circle ms-1 me-2" style="font-size: 0.35rem"></i>Millennial
+                                        Asia</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Publication Process & Important Notes -->
+            <div class="mt-5 pt-5 border-top border-light">
+                <!-- Important Note -->
+                <div class="border rounded-4 p-4 mb-5" style="background-color: #fffbeb; border-color: #fde68a;">
+                    <h4 class="fw-bold fs-5 mb-3 d-flex align-items-center gap-2" style="color: #92400e;">
+                        <i class="fas fa-exclamation-triangle"></i> Important Note
+                    </h4>
+                    <p class="text-secondary small lh-lg mb-3">
+                        All Authors are acknowledged that we have some journals associated with conference, which charge
+                        publication fee.
+                        <strong class="text-dark">So if paper is accepted in those Journals authors will be requested to
+                            pay publication
+                            fee.</strong>
+                    </p>
+                    <p class="text-secondary small lh-lg mb-0">
+                        If paper accepted in Journal which has no fee so authors will get <span
+                            class="fw-bold text-success">free of cost online publication</span>.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Journal Publication Process -->
+                    <div class="col-md-6">
+                        <div class="bg-white p-4 rounded-4 shadow-sm border border-light h-100">
+                            <h4 class="fw-bold text-brand-blue fs-5 mb-4 text-uppercase border-bottom pb-2">
+                                Journal Publication Process
+                            </h4>
+                            <div class="d-flex flex-column gap-3 text-secondary small lh-lg">
+                                <p class="mb-0">
+                                    All papers of the conference will also be reviewed jointly by <span
+                                        class="fw-bold text-dark">ICEQCIIS-2026 Review Panel</span> and respective
+                                    Journals
+                                    reviewing teams.
+                                </p>
+                                <p class="mb-0">
+                                    All the selected authors will be offered for publication in Scopus indexed
+                                    associated
+                                    journals subject to the compliance with journals guidelines, terms and conditions.
+                                </p>
+                                <p class="mb-0">
+                                    The associated journals will publish the selected articles in their special /
+                                    regular
+                                    issues dedicated for this conference.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proceeding Publication -->
+                    <div class="col-md-6">
+                        <div class="bg-white p-4 rounded-4 shadow-sm border border-light h-100">
+                            <h4 class="fw-bold text-brand-blue fs-5 mb-4 text-uppercase border-bottom pb-2">
+                                Proceeding Publication
+                            </h4>
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
+                                    style="width: 3rem; height: 3rem; background-color: #e0e7ff; color: #4f46e5;">
+                                    <i class="fas fa-book fs-5"></i>
+                                </div>
+                                <p class="text-secondary small lh-lg mb-0 pt-1">
+                                    All papers / abstracts accepted for presentation in this conference will be
+                                    <strong class="text-dark">Blind Peer Reviewed</strong> and will be published in the
+                                    conference proceeding
+                                    with an <strong class="text-dark">ISBN in a Soft Form</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+<footer id="contact" class="bg-dark text-secondary py-5">
+            <div class="container px-4 px-md-5">
+                <div class="row g-5 mb-5">
+                    <div class="col-md-4">
+                        <h3 class="font-serif fs-4 fw-bold text-white mb-4">ICEQCIIS-2026</h3>
+                        <p class="small lh-lg mb-4">
+                            International Conference on Emerging Quantum Computing and IoT Technologies for Intelligent
+                            Security.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#"
+                                class="btn btn-outline-secondary rounded-3 d-flex align-items-center justify-content-center p-0 transition-all text-white border-0"
+                                style="width: 2.5rem; height: 2.5rem; background-color: rgba(255,255,255,0.05);">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#"
+                                class="btn btn-outline-secondary rounded-3 d-flex align-items-center justify-content-center p-0 transition-all text-white border-0"
+                                style="width: 2.5rem; height: 2.5rem; background-color: rgba(255,255,255,0.05);">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#"
+                                class="btn btn-outline-secondary rounded-3 d-flex align-items-center justify-content-center p-0 transition-all text-white border-0"
+                                style="width: 2.5rem; height: 2.5rem; background-color: rgba(255,255,255,0.05);">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h4 class="fw-bold text-white fs-5 mb-4">CONTACT US</h4>
+                        <div class="d-flex flex-column gap-4">
+                            <!-- Convener -->
+                            <div>
+                                <h5 class="text-brand-gold fw-bold text-uppercase mb-2 border-bottom border-secondary pb-1 d-inline-block"
+                                    style="font-size: 0.875rem;">
+                                    Convener
+                                </h5>
+                                <div class="ms-1">
+                                    <p class="fw-bold text-white mb-1">Dr. K.V.D. Sagar</p>
+                                    <div class="small mt-1 d-flex flex-column gap-1">
+                                        <p class="mb-0 d-flex align-items-center gap-2"><i
+                                                class="fas fa-phone text-brand-gold" style="width: 1rem;"></i>
+                                            +91-9885182669</p>
+                                        <p class="mb-0 d-flex align-items-center gap-2"><i
+                                                class="fas fa-envelope text-brand-gold" style="width: 1rem;"></i> <a
+                                                href="mailto:sagar.tadepalli@kluniversity.in"
+                                                class="text-secondary text-decoration-none">sagar.tadepalli@kluniversity.in</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Co-Conveners -->
+                            <div>
+                                <h5 class="text-brand-gold fw-bold text-uppercase mb-2 border-bottom border-secondary pb-1 d-inline-block"
+                                    style="font-size: 0.875rem;">
+                                    Co-Conveners
+                                </h5>
+                                <div class="d-flex flex-column gap-3 ms-1">
+                                    <div>
+                                        <p class="fw-bold text-white small mb-1">Dr. Ch. Bhupathi</p>
+                                        <div class="small mt-1 d-flex flex-column gap-1" style="font-size: 0.8rem;">
+                                            <p class="mb-0 d-flex align-items-center gap-2"><i
+                                                    class="fas fa-phone text-brand-gold" style="width: 1rem;"></i>
+                                                7893500719</p>
+                                            <p class="mb-0 d-flex align-items-center gap-2"><i
+                                                    class="fas fa-envelope text-brand-gold" style="width: 1rem;"></i> <a
+                                                    href="mailto:Bhupati@kluniversity.in"
+                                                    class="text-secondary text-decoration-none">Bhupati@kluniversity.in</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold text-white small mb-1">Dr. KTPS Kumar</p>
+                                        <div class="small mt-1 d-flex flex-column gap-1" style="font-size: 0.8rem;">
+                                            <p class="mb-0 d-flex align-items-center gap-2"><i
+                                                    class="fas fa-phone text-brand-gold" style="width: 1rem;"></i>
+                                                9493025582</p>
+                                            <p class="mb-0 d-flex align-items-center gap-2"><i
+                                                    class="fas fa-envelope text-brand-gold" style="width: 1rem;"></i> <a
+                                                    href="mailto:satishkumar@kluniversity.in"
+                                                    class="text-secondary text-decoration-none">satishkumar@kluniversity.in</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h4 class="fw-bold text-white fs-5 mb-4">Quick Links</h4>
+                        <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                            <li><a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2F" target="_blank"
+                                    class="text-secondary text-decoration-none d-flex align-items-center gap-2 transition-colors nav-link p-0"><i
+                                        class="fas fa-angle-right small"></i> Submit Paper (Microsoft CMT)</a></li>
+                            <li><a href="javascript:void(0)" onclick="openBrochureModal()"
+                                    class="text-secondary text-decoration-none d-flex align-items-center gap-2 transition-colors nav-link p-0"><i
+                                        class="fas fa-angle-right small"></i> Download BROCHURE</a></li>
+
+</ul>
+                    </div>
+                </div>
+
+                <div
+                    class="border-top border-secondary pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center small text-secondary">
+                    <p class="mb-0">&copy; 2026 ICEQCIIS. All Rights Reserved.</p>
+                    <div class="d-flex gap-4 mt-3 mt-md-0">
+                        <a href="#" class="text-secondary text-decoration-none transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-secondary text-decoration-none transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- BROCHURE Modal -->
+        <div id="brochure-modal" class="position-fixed top-0 start-0 w-100 h-100 d-none" style="z-index: 1100;"
+            aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <!-- Overlay with blur -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"
+                style="backdrop-filter: blur(8px);" onclick="closeBrochureModal()"></div>
+
+            <!-- Centering Wrapper -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center p-3 p-md-4"
+                style="pointer-events: none;">
+                <!-- Modal Content -->
+                <div class="position-relative w-100 bg-white rounded-4 shadow overflow-hidden d-flex flex-column"
+                    style="max-width: 64rem; height: 85vh; animation: fadeInScale 0.3s ease-out; pointer-events: auto;">
+                    <!-- Minimalist Header -->
+                    <div class="d-flex justify-content-between align-items-center px-4 py-3 border-bottom bg-white z-2">
+                        <h3 class="fs-5 fw-bold text-dark mb-0">
+                            Conference BROCHURE
+                        </h3>
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="assets/iceqciis-2026-brochure.pdf" download="ICEQCIIS-2026-BROCHURE.pdf"
+                                class="btn btn-dark btn-sm d-flex align-items-center gap-2 px-3 transition-all">
+                                <i class="fas fa-download"></i> <span class="d-none d-sm-inline">Download</span>
+                            </a>
+                            <button type="button" class="btn-close" onclick="closeBrochureModal()"
+                                aria-label="Close"></button>
+                        </div>
+                    </div>
+
+                    <!-- PDF Viewer -->
+                    <div class="position-relative flex-grow-1 w-100 bg-light overflow-hidden">
+                        <div class="position-absolute top-50 start-50 translate-middle text-secondary z-0 text-center">
+                            <i class="fas fa-spinner fa-spin fs-3 mb-2"></i>
+                            <div class="small text-muted mt-2">Loading PDF...</div>
+                        </div>
+                        <iframe src="assets/iceqciis-2026-brochure.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                            class="position-absolute top-0 start-0 w-100 h-100 border-0 z-1 bg-white"
+                            style="z-index: 10;">
+                            Your browser does not support PDFs. <a href="assets/iceqciis-2026-brochure.pdf">Download the
+                                brochure here</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Acknowledgment Modal -->
+        <div id="ack-modal" class="position-fixed top-0 start-0 w-100 h-100 d-none" style="z-index: 1080;"
+            aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"
+                style="backdrop-filter: blur(4px);" onclick="closeAckModal()"></div>
+            <div class="d-flex min-vh-100 align-items-center justify-content-center p-3">
+                <div class="position-relative w-100 bg-white rounded-4 shadow p-4 p-md-5"
+                    style="max-width: 48rem; animation: fadeInScale 0.3s ease-out;">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-4" onclick="closeAckModal()"
+                        aria-label="Close"></button>
+                    <div class="d-flex align-items-center justify-content-center gap-3 mb-4 pb-2">
+                        <i class="fas fa-handshake fs-2 text-brand-blue"></i>
+                        <h3 class="font-serif fs-2 fw-bold text-brand-blue mb-0" id="modal-title">Acknowledgment</h3>
+                    </div>
+                    <div class="bg-light p-4 p-md-5 rounded-4 border">
+                        <p class="text-secondary fs-5 lh-lg fst-italic text-center fw-medium mb-0">
+                            "The Microsoft CMT service was used for managing the peer-reviewing process for this
+                            conference. This service was provided for free by Microsoft and they bore all expenses,
+                            including costs for Azure cloud services as well as for software development and support."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fixed Bottom Right Action Buttons -->
+        <div class="position-fixed d-flex flex-column gap-3 align-items-end"
+            style="bottom: 1.5rem; right: 1.5rem; z-index: 9999;">
+            <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2F" target="_blank"
+                class="btn rounded-pill shadow-lg text-brand-darkBlue fw-bold d-flex align-items-center justify-content-center gap-2 transition-all hover-translate-y-1 mb-2 px-4 py-2 border"
+                style="background-color: var(--brand-gold); border-color: #eab308; white-space: nowrap;">
+                <span class="fs-6 d-flex align-items-center gap-2"><i class="fas fa-paper-plane"></i> Submit
+                    Paper</span>
+            </a>
+            <a href="https://forms.gle/jGK9G8fB9BPwa6Sp8" target="_blank"
+                class="btn rounded-pill shadow-lg text-brand-darkBlue fw-bold d-flex align-items-center justify-content-center gap-2 transition-all hover-translate-y-1 mb-2 px-4 py-2 border"
+                style="background-color: var(--brand-cyan); border-color: rgba(34,211,238,0.5); white-space: nowrap;">
+                <span class="fs-6 d-flex align-items-center gap-2"><i class="fas fa-user-plus"></i> Register</span>
+            </a>
+            <button onclick="openBrochureModal()"
+                class="btn btn-dark rounded-pill shadow-lg fw-bold d-flex align-items-center justify-content-center gap-2 transition-all hover-translate-y-1 px-4 py-2 border border-secondary"
+                style="white-space: nowrap;">
+                <span class="fs-6 d-flex align-items-center gap-2"><i class="fas fa-file-pdf text-danger"></i>
+                    BROCHURE</span>
+            </button>
+        </div>
+
+            <script>
+        // BROCHURE Modal Functions
+        function openBrochureModal() {
+            const modal = document.getElementById('brochure-modal');
+            modal.classList.remove('d-none');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBrochureModal() {
+            const modal = document.getElementById('brochure-modal');
+            modal.classList.add('d-none');
+            document.body.style.overflow = '';
+        }
+
+        // Acknowledgment Modal Functions
+        function openAckModal() {
+            const modal = document.getElementById('ack-modal');
+            modal.classList.remove('d-none');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAckModal() {
+            const modal = document.getElementById('ack-modal');
+            modal.classList.add('d-none');
+            document.body.style.overflow = '';
+        }
+
+        // Close modals on Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeBrochureModal();
+                closeAckModal();
+            }
+        });
+    </script>
+
+        <!-- Bootstrap JS Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

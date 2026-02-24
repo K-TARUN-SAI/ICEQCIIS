@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICEQCIIS-2026 | International Conference on Emerging Quantum Computing & IoT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="antialiased"
+    style="background-image: url('assets/image.png'); background-size: cover; background-attachment: fixed; background-position: center; background-color: #050914;">
+
+    <!-- Top Banner -->
+    <div class="relative w-full z-50 bg-white h-auto">
+        <img src="assets/klbanner.png" alt="Header Banner" class="w-full h-auto object-cover object-top">
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top w-100 z-50 glass-nav transition-all duration-300 py-2">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand d-flex align-items-center gap-3 cursor-pointer p-0" href="index.html"
+                onclick="window.location.hash=''">
+                <div class="bg-white bg-opacity-90 rounded p-1">
+                    <img src="assets/IntiMain.png" alt="INTI Logo"
+                        style="height: 4rem; width: auto; object-fit: contain;">
+                </div>
+            </a>
+
+            <button class="navbar-toggler border-0 shadow-none text-white focus-outline-none" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars fs-2 hover-text-brand-cyan transition-colors"></i>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                <!-- Desktop nav items (Single Row) -->
+                <div class="d-none d-lg-flex justify-content-center align-items-center flex-wrap w-100 py-2" style="column-gap: 2rem; row-gap: 0.5rem;">
+                    <a href="index.html" class="nav-link-custom neon-glow">HOME</a>
+                    <a href="about.html" class="nav-link-custom neon-glow">ABOUT</a>
+                    <a href="committee.html" class="nav-link-custom neon-glow">COMMITTEES</a>
+                    <a href="cfp.html" class="nav-link-custom neon-glow">AUTHORS GUIDELINES</a>
+                    <a href="registration.html" class="nav-link-custom neon-glow">REGISTRATION</a>
+                    <a href="contact.html" class="nav-link-custom neon-glow">CONTACT US</a>
+                    <button onclick="openBrochureModal()"
+                            class="btn-nav-custom neon-glow cursor-pointer">BROCHURE</button>
+                    <button onclick="openAckModal()" class="btn-nav-custom neon-glow cursor-pointer">CMT
+                            ACKNOWLEDGEMENT</button>
+                </div>
+
+                <!-- Mobile nav items (1 column) -->
+                <div class="d-lg-none d-flex flex-column w-100 mt-3 pt-2"
+                    style="background: rgba(10, 15, 35, 0.95); backdrop-filter: blur(16px); border-top: 1px solid rgba(255,255,255,0.1); border-radius: 0.5rem; padding: 0.5rem;">
+                    <a href="index.html" class="mobile-nav-link">HOME</a>
+                    <a href="about.html" class="mobile-nav-link">ABOUT</a>
+                    <a href="speakers.html" class="mobile-nav-link">KEYNOTE SPEAKERS</a>
+                    <a href="tracks.html" class="mobile-nav-link">TRACKS</a>
+                    <a href="committee.html" class="mobile-nav-link">COMMITTEES</a>
+                    <a href="cfp.html" class="mobile-nav-link">AUTHORS GUIDELINES</a>
+                    <a href="dates.html" class="mobile-nav-link">DATES</a>
+                    <a href="registration.html" class="mobile-nav-link">REGISTRATION</a>
+                    <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+                    <button onclick="openBrochureModal()" class="mobile-btn-link">BROCHURE</button>
+                    <button onclick="openAckModal()" class="mobile-btn-link">CMT ACKNOWLEDGEMENT</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<section id="registration" class="py-5 bg-white">
+            <div class="container px-4 px-md-5" style="max-width: 960px;">
+                <div class="text-center mb-5">
+                    <h2 class="font-serif fs-2 fw-bold text-brand-blue mb-4">Registration Fees</h2>
+                    <div class="text-start mx-auto mt-4 mb-5">
+                        <h3 class="fs-4 fw-bold text-dark text-center mb-4">Registration & Participation Policy
+                        </h3>
+
+                        <div class="d-flex flex-column gap-3 mb-4">
+                            <div>
+                                <h4 class="fw-bold text-brand-blue fs-5 mb-2">Early Bird Registration</h4>
+                                <p class="text-secondary lh-lg mb-0">Early bird registration is encouraged. Authors are
+                                    advised to
+                                    complete registration within the stipulated early bird deadline to avail applicable
+                                    benefits.
+                                    <br>
+                                    The Early Bird Registration deadline is 16th March 2026.
+                                    Early Bird registrants can avail a discount of ₹500 on the regular registration fee
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-4 shadow border border-light overflow-hidden mb-5">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="bg-light border-bottom">
+                                <tr>
+                                    <th class="p-4 fw-bold text-brand-blue border-0">Category</th>
+                                    <th class="p-4 fw-bold text-brand-blue border-0">National (INR)</th>
+                                    <th class="p-4 fw-bold text-brand-blue border-0">International (USD)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-4 fw-medium text-dark border-light">UG/PG Students</td>
+                                    <td class="p-4 text-secondary border-light">
+                                        <span class="d-block small text-muted text-uppercase mb-1"
+                                            style="font-size: 0.75rem;">Offline / Online</span>
+                                        ₹ 1500 / ₹ 1000
+                                    </td>
+                                    <td class="p-4 text-secondary border-light">
+                                        <span class="d-block small text-muted text-uppercase mb-1"
+                                            style="font-size: 0.75rem;">Offline / Online</span>
+                                        $ 16 / $ 10
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 fw-medium text-dark border-light">Faculty / Research Scholars</td>
+                                    <td class="p-4 text-secondary border-light">
+                                        <span class="d-block small text-muted text-uppercase mb-1"
+                                            style="font-size: 0.75rem;">Offline / Online</span>
+                                        ₹ 2000 / ₹ 1200
+                                    </td>
+                                    <td class="p-4 text-secondary border-light">
+                                        <span class="d-block small text-muted text-uppercase mb-1"
+                                            style="font-size: 0.75rem;">Offline / Online</span>
+                                        $ 22 / $ 15
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 fw-medium text-dark border-light">Industry Delegates</td>
+                                    <td class="p-4 text-secondary border-light">
+                                        <span class="d-block small text-muted text-uppercase mb-1"
+                                            style="font-size: 0.75rem;">Offline / Online</span>
+                                        ₹ 3000 / ₹ 2000
+                                    </td>
+                                    <td class="p-4 text-secondary border-light">
+                                        <span class="d-block small text-muted text-uppercase mb-1"
+                                            style="font-size: 0.75rem;">Offline / Online</span>
+                                        $ 50 / $ 40
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 fw-medium text-dark border-light">Attendee/Listener(Per head)</td>
+                                    <td class="p-4 text-secondary border-light">
+                                        <span class="d-block small text-muted text-uppercase mb-1"
+                                            style="font-size: 0.75rem;">Offline / Online</span>
+                                        ₹ 500 / ₹ 250
+                                    </td>
+                                    <td class="p-4 text-secondary border-light">
+                                        <span class="d-block small text-muted text-uppercase mb-1"
+                                            style="font-size: 0.75rem;">Offline / Online</span>
+                                        $ 6 / $ 3
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 fw-medium text-dark border-light">Poster Presentation (allowed for
+                                        two members)</td>
+                                    <td class="p-4 text-secondary border-light">
+                                        <span class="d-block small text-muted text-uppercase mb-1"
+                                            style="font-size: 0.75rem;">Offline / Online</span>
+                                        ₹ 1000 / ₹ 500
+                                    </td>
+                                    <td class="p-4 text-secondary border-light">
+                                        <span class="d-block small text-muted text-uppercase mb-1"
+                                            style="font-size: 0.75rem;">Offline / Online</span>
+                                        $ 12 / $ 6
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="mt-5 mx-auto">
+                    <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm border border-light mb-4">
+                        <h3 class="fs-4 fw-bold text-dark mb-4">Registration Fee Includes:</h3>
+                        <ul class="row g-3 list-unstyled text-secondary mb-0">
+                            <li class="col-md-6 d-flex align-items-center gap-2"><i
+                                    class="fas fa-check text-success"></i> Welcome
+                                reception</li>
+                            <li class="col-md-6 d-flex align-items-center gap-2"><i
+                                    class="fas fa-check text-success"></i> Printed
+                                Name
+                                Card</li>
+                            <li class="col-md-6 d-flex align-items-center gap-2"><i
+                                    class="fas fa-check text-success"></i>
+                                Conference
+                                Folder or Bag</li>
+                            <li class="col-md-6 d-flex align-items-center gap-2"><i
+                                    class="fas fa-check text-success"></i>
+                                Participation in the technical program</li>
+                            <li class="col-md-6 d-flex align-items-center gap-2"><i
+                                    class="fas fa-check text-success"></i> Printed
+                                Participation & presentation Certificate</li>
+                            <li class="col-md-6 d-flex align-items-center gap-2"><i
+                                    class="fas fa-check text-success"></i> Coffee
+                                breaks on the presentation day</li>
+                            <li class="col-md-6 d-flex align-items-center gap-2"><i
+                                    class="fas fa-check text-success"></i> Lunch on
+                                the
+                                presentation day</li>
+                            <li class="col-md-6 d-flex align-items-center gap-2"><i
+                                    class="fas fa-check text-success"></i>
+                                Additional
+                                Author Rs. 300</li>
+                        </ul>
+                    </div>
+
+                    <div class="border rounded-3 p-3 text-center mb-5"
+                        style="background-color: #fefce8; border-color: #fef08a;">
+                        <span class="fw-bold" style="color: #854d0e;">Discounts:</span> <span
+                            class="text-secondary">IEEE
+                            Members 10% | Other Professional Societies 5%</span>
+                    </div>
+
+                    <div class="border border-2 border-primary rounded-4 overflow-hidden shadow-sm"
+                        style="border-color: var(--brand-blue) !important;">
+                        <div class="py-3 px-4 text-center" style="background-color: var(--brand-blue);">
+                            <h3 class="text-white fw-bold fs-5 mb-0">Payment Details</h3>
+                        </div>
+                        <div class="bg-white p-4 p-md-5 row g-4 text-secondary">
+                            <div class="col-md-6">
+                                <p class="mb-2"><span class="fw-bold text-dark">Bank Name:</span> State Bank of India
+                                </p>
+                                <p class="mb-2"><span class="fw-bold text-dark">Account Name:</span> KL University</p>
+                                <p class="mb-0"><span class="fw-bold text-dark">Account No:</span> 62434363674</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="mb-2"><span class="fw-bold text-dark">IFSC Code:</span> SBIN0021361</p>
+                                <p class="mb-0"><span class="fw-bold text-dark">Branch:</span> Vaddeswaram, Guntur-522
+                                    302</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 text-center">
+                    <a href="https://forms.gle/jGK9G8fB9BPwa6Sp8" target="_blank"
+                        class="btn text-white fw-bold py-3 px-5 rounded-3 shadow-sm transition-all"
+                        style="background-color: var(--brand-blue);">
+                        Register Now
+                    </a>
+                </div>
+            </div>
+        </section>
+<section class="py-5 bg-light border-top border-light">
+            <div class="container px-4 px-md-5">
+                <h2 class="font-serif fs-2 fw-bold text-center mb-5 text-dark text-uppercase"
+                    style="letter-spacing: 0.05em;">
+                    Participation & Policy</h2>
+
+                <div class="row g-4">
+                    <!-- Offline Participation Card -->
+                    <div class="col-lg-4">
+                        <div
+                            class="bg-white rounded-4 shadow-sm h-100 border border-light d-flex flex-column transition-all hover-translate-y-1">
+                            <div class="p-4 border-bottom"
+                                style="background-color: rgba(30,58,138,0.05); border-color: rgba(30,58,138,0.1);">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="rounded-circle text-white d-flex align-items-center justify-content-center flex-shrink-0"
+                                        style="width: 2.5rem; height: 2.5rem; background-color: var(--brand-blue);">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h3 class="fw-bold fs-5 text-brand-blue mb-0">Offline Participation</h3>
+                                </div>
+                            </div>
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <p class="text-secondary mb-4 small fw-medium">Physical presence required at venue.</p>
+
+                                <div class="bg-light p-3 rounded-3 border border-light mb-4">
+                                    <h4 class="fw-bold text-dark fs-6 mb-2 d-flex align-items-center gap-2">
+                                        <i class="fas fa-microphone-alt text-brand-gold"></i> Oral Presentations
+                                    </h4>
+                                    <p class="small text-secondary lh-lg text-justify mb-0">
+                                        Contributed oral presentations are 15 minutes long, including 5 minutes for
+                                        questions
+                                        and discussion. The paper must be presented by one of the author or co-authors.
+                                        Oral
+                                        presentations are to be made either using your laptop or the PC that will be
+                                        available
+                                        in the session room (Windows system + Power point). Please come to the session
+                                        room
+                                        with
+                                        your laptop or pen drive having your presentation file. There will be a
+                                        volunteer on
+                                        hand to assist in starting each presentation.
+                                    </p>
+                                </div>
+                                <ul class="list-unstyled small text-secondary d-flex flex-column gap-2 mb-0">
+                                    <li class="d-flex align-items-start gap-2"><i
+                                            class="fas fa-check text-success mt-1"></i>
+                                        Conference Kit provided</li>
+                                    <li class="d-flex align-items-start gap-2"><i
+                                            class="fas fa-check text-success mt-1"></i>
+                                        Networking opportunities</li>
+                                    <li class="d-flex align-items-start gap-2"><i
+                                            class="fas fa-check text-success mt-1"></i>
+                                        Lunch
+                                        & Refreshments</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Online Participation Card -->
+                    <div class="col-lg-4">
+                        <div
+                            class="bg-white rounded-4 shadow-sm h-100 border border-light d-flex flex-column transition-all hover-translate-y-1">
+                            <div class="p-4 border-bottom"
+                                style="background-color: rgba(30,58,138,0.05); border-color: rgba(30,58,138,0.1);">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="rounded-circle text-white d-flex align-items-center justify-content-center flex-shrink-0"
+                                        style="width: 2.5rem; height: 2.5rem; background-color: var(--brand-lightBlue);">
+                                        <i class="fas fa-laptop-house"></i>
+                                    </div>
+                                    <h3 class="fw-bold fs-5 text-brand-blue mb-0">Online Participation</h3>
+                                </div>
+                            </div>
+                            <div class="p-4 d-flex flex-column flex-grow-1">
+                                <p class="text-secondary mb-4 small fw-medium">Virtual access details provided prior to
+                                    event.</p>
+
+                                <div class="bg-light p-3 rounded-3 border border-light mb-4">
+                                    <h4 class="fw-bold text-dark fs-6 mb-2 d-flex align-items-center gap-2">
+                                        <i class="fas fa-video text-brand-gold"></i> Virtual Presentations
+                                    </h4>
+                                    <p class="small text-secondary lh-lg text-justify mb-0">
+                                        Video recordings (.avi, .mp4, and .flv) of virtual presentations will be played
+                                        at
+                                        the
+                                        related session, and presenters will be connected via Skype. Thus, the audiences
+                                        will be
+                                        able to ask their questions to the presenter of the virtual presentation.
+                                    </p>
+                                </div>
+                                <ul class="list-unstyled small text-secondary d-flex flex-column gap-2 mb-0">
+                                    <li class="d-flex align-items-start gap-2"><i
+                                            class="fas fa-check text-success mt-1"></i>
+                                        E-Certificate provided</li>
+                                    <li class="d-flex align-items-start gap-2"><i
+                                            class="fas fa-check text-success mt-1"></i>
+                                        Access
+                                        to all sessions</li>
+                                    <li class="d-flex align-items-start gap-2"><i
+                                            class="fas fa-check text-success mt-1"></i>
+                                        Digital proceedings</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Policy Card -->
+                    <div class="col-lg-4">
+                        <div
+                            class="bg-white rounded-4 shadow-sm h-100 border border-light d-flex flex-column transition-all hover-translate-y-1">
+                            <div class="p-4 border-bottom" style="background-color: #fef2f2; border-color: #fee2e2;">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="rounded-circle bg-danger text-white d-flex align-items-center justify-content-center flex-shrink-0"
+                                        style="width: 2.5rem; height: 2.5rem;">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h3 class="fw-bold fs-5 text-danger mb-0">Refund Policy</h3>
+                                </div>
+                            </div>
+                            <div class="p-4 d-flex flex-column flex-grow-1 justify-content-between">
+                                <div class="mb-4">
+                                    <p class="small text-secondary mb-4 fst-italic">Cancellation requests must be
+                                        submitted in
+                                        <span class="fw-bold text-dark">writing via email</span>.
+                                    </p>
+
+                                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                                        <li class="d-flex gap-3 small">
+                                            <span
+                                                class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                                style="width: 1.5rem; height: 1.5rem; background-color: #dcfce7; color: #16a34a; font-size: 0.75rem;"><i
+                                                    class="fas fa-check"></i></span>
+                                            <span class="text-secondary"><strong class="text-dark">On/Before Early
+                                                    Bird:</strong> Eligible for
+                                                refund (minus admin charges)</span>
+                                        </li>
+                                        <li class="d-flex gap-3 small">
+                                            <span
+                                                class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                                style="width: 1.5rem; height: 1.5rem; background-color: #ffedd5; color: #f97316; font-size: 0.75rem;"><i
+                                                    class="fas fa-exclamation"></i></span>
+                                            <span class="text-secondary"><strong class="text-dark">After Early
+                                                    Bird:</strong> Partial refund
+                                                possible (subject to deductions)</span>
+                                        </li>
+                                        <li class="d-flex gap-3 small">
+                                            <span
+                                                class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                                style="width: 1.5rem; height: 1.5rem; background-color: #fee2e2; color: #ef4444; font-size: 0.75rem;"><i
+                                                    class="fas fa-times"></i></span>
+                                            <span class="text-secondary"><strong class="text-dark">After Final
+                                                    Deadline:</strong> No refunds
+                                                provided</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="mt-4 pt-4 border-top border-light">
+                                    <div class="d-flex align-items-center gap-2 text-brand-blue fw-bold small">
+                                        <i class="fas fa-certificate text-brand-gold"></i>
+                                        <span>Participation Certificate Issued to All Registered Authors</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+<section class="py-5 bg-white border-top border-light">
+            <div class="container px-4 px-md-5">
+                <div class="row g-5">
+                    <!-- Registration Confirmation -->
+                    <div class="col-md-6">
+                        <div class="rounded-4 p-4 p-md-5 h-100 border transition-all hover-translate-y-1"
+                            style="background-color: #eef2ff; border-color: #e0e7ff;">
+                            <h3 class="fs-5 fw-bold text-brand-blue mb-4 d-flex align-items-center gap-2">
+                                <i class="fas fa-envelope-open-text text-brand-gold"></i> Registration Confirmation
+                            </h3>
+                            <div class="d-flex flex-column flex-grow-1 text-secondary">
+                                <p class="lh-lg border-start border-4 ps-3 py-1 mb-4"
+                                    style="border-color: #a5b4fc !important;">
+                                    Payment confirmation will be given after getting the full payment proof at the
+                                    official
+                                    mail
+                                    ID of Conference within <strong class="text-dark">2 working days</strong>.
+                                </p>
+                                <div class="bg-white p-3 rounded-3 shadow-sm border mt-auto"
+                                    style="border-color: #e0e7ff;">
+                                    <i class="fas fa-map-marked-alt text-brand-blue me-2"></i>
+                                    <span class="fw-medium small text-dark">All authors and listeners must take the
+                                        final schedule
+                                        and
+                                        venue details before starting the journey to the conference.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Poster Presentation Guidelines -->
+                    <div class="col-md-6">
+                        <div class="rounded-4 p-4 p-md-5 h-100 border transition-all hover-translate-y-1"
+                            style="background-color: #fffbeb; border-color: #fef3c7;">
+                            <h3 class="fs-5 fw-bold mb-4 d-flex align-items-center gap-2" style="color: #92400e;">
+                                <i class="fas fa-chalkboard-teacher text-brand-gold"></i> Instructions for Poster
+                                Presentations
+                            </h3>
+                            <div class="d-flex flex-column gap-3 text-secondary small">
+                                <div class="d-flex align-items-start gap-3">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                        style="width: 2rem; height: 2rem; background-color: #fde68a; color: #92400e; font-size: 0.75rem;">
+                                        <i class="fas fa-ruler-combined"></i>
+                                    </div>
+                                    <p class="pt-1 mb-0"><strong class="text-dark">Maximum poster size:</strong> 36
+                                        inches wide by 48 inches high
+                                        (3
+                                        ft. x 4 ft.).</p>
+                                </div>
+                                <div class="d-flex align-items-start gap-3">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                        style="width: 2rem; height: 2rem; background-color: #fde68a; color: #92400e; font-size: 0.75rem;">
+                                        <i class="fas fa-print"></i>
+                                    </div>
+                                    <p class="pt-1 mb-0">You must provide your <strong class="text-dark">own
+                                            printout</strong> of the poster
+                                        itself.
+                                    </p>
+                                </div>
+                                <div class="d-flex align-items-start gap-3">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                        style="width: 2rem; height: 2rem; background-color: #fde68a; color: #92400e; font-size: 0.75rem;">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <p class="pt-1 mb-0">Please set up your poster in the morning prior to the Opening
+                                        ceremony
+                                        and
+                                        remove it at the end of the session.</p>
+                                </div>
+                                <div class="d-flex align-items-start gap-3">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                        style="width: 2rem; height: 2rem; background-color: #fde68a; color: #92400e; font-size: 0.75rem;">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <p class="pt-1 mb-0">One of the paper authors or co-authors must be present and
+                                        available for
+                                        discussion at the poster session.</p>
+                                </div>
+                                <div class="d-flex align-items-start gap-3">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                                        style="width: 2rem; height: 2rem; background-color: #fde68a; color: #92400e; font-size: 0.75rem;">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                    <p class="pt-1 mb-0">Posters will be on display in the conference room.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Partner Section -->
+<section class="py-5 bg-white">
+            <div class="container px-4 text-center">
+                <h2 class="font-serif fs-3 fw-bold text-brand-blue mb-4 text-uppercase" style="letter-spacing: 0.05em;">
+                    Media Partners
+                </h2>
+                <div class="mx-auto mb-5" style="width: 5rem; height: 0.25rem; background-color: var(--brand-gold);">
+                </div>
+
+                <div
+                    class="row g-4 row-cols-2 row-cols-md-4 align-items-center justify-content-center opacity-75 transition-all hover-opacity-100">
+                    <!-- Partner 1 -->
+                    <div class="col">
+                        <div class="p-3 bg-white rounded-3 shadow-sm border transition-all hover-shadow d-flex align-items-center justify-content-center"
+                            style="height: 8rem;">
+                            <img src="./assets/partner1.png" alt="Media Partner 1" class="img-fluid"
+                                style="max-height: 6rem;">
+                        </div>
+                    </div>
+                    <!-- Partner 2 -->
+                    <div class="col">
+                        <div class="p-3 bg-white rounded-3 shadow-sm border transition-all hover-shadow d-flex align-items-center justify-content-center"
+                            style="height: 8rem;">
+                            <img src="./assets/partner2.png" alt="Media Partner 2" class="img-fluid"
+                                style="max-height: 6rem;">
+                        </div>
+                    </div>
+                    <!-- Partner 3 -->
+                    <div class="col">
+                        <div class="p-3 bg-white rounded-3 shadow-sm border transition-all hover-shadow d-flex align-items-center justify-content-center"
+                            style="height: 8rem;">
+                            <img src="./assets/partner3.png" alt="Media Partner 3" class="img-fluid"
+                                style="max-height: 6rem;">
+                        </div>
+                    </div>
+                    <!-- Partner 4 -->
+                    <div class="col">
+                        <div class="p-3 bg-white rounded-3 shadow-sm border transition-all hover-shadow d-flex align-items-center justify-content-center"
+                            style="height: 8rem;">
+                            <img src="./assets/partner4.png" alt="Media Partner 4" class="img-fluid"
+                                style="max-height: 6rem;">
+                        </div>
+                    </div>
+                    <!-- Partner 5 -->
+                    <div class="col">
+                        <div class="p-3 bg-white rounded-3 shadow-sm border transition-all hover-shadow d-flex align-items-center justify-content-center"
+                            style="height: 8rem;">
+                            <img src="./assets/partner5.png" alt="Media Partner 5" class="img-fluid"
+                                style="max-height: 6rem;">
+                        </div>
+                    </div>
+                    <!-- Partner 6 -->
+                    <div class="col">
+                        <div class="p-3 bg-white rounded-3 shadow-sm border transition-all hover-shadow d-flex align-items-center justify-content-center"
+                            style="height: 8rem;">
+                            <img src="./assets/partner6.png" alt="Media Partner 6" class="img-fluid"
+                                style="max-height: 6rem;">
+                        </div>
+                    </div>
+                    <!-- Partner 7 -->
+                    <div class="col">
+                        <div class="p-3 bg-white rounded-3 shadow-sm border transition-all hover-shadow d-flex align-items-center justify-content-center"
+                            style="height: 8rem;">
+                            <img src="./assets/partner7.png" alt="Media Partner 7" class="img-fluid"
+                                style="max-height: 6rem;">
+                        </div>
+                    </div>
+                    <!-- Partner 8 -->
+                    <div class="col">
+                        <div class="p-3 bg-white rounded-3 shadow-sm border transition-all hover-shadow d-flex align-items-center justify-content-center"
+                            style="height: 8rem;">
+                            <img src="./assets/partner8.png" alt="Media Partner 8" class="img-fluid"
+                                style="max-height: 6rem;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Co-Sponsors Section -->
+<section class="py-5 bg-light border-top border-light">
+            <div class="container px-4 text-center">
+                <h2 class="font-serif fs-3 fw-bold text-brand-blue mb-4 text-uppercase" style="letter-spacing: 0.05em;">
+                    Co-Sponsors
+                </h2>
+                <div class="mx-auto mb-5" style="width: 5rem; height: 0.25rem; background-color: var(--brand-gold);">
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-center gap-4 align-items-center transition-all">
+                    <!-- Sponsor 1 -->
+                    <div class="bg-white p-4 rounded-3 shadow-sm border d-flex align-items-center justify-content-center"
+                        style="width: 250px; height: 160px;">
+                        <img src="./assets/sponser1.png" alt="Sponsor 1" class="img-fluid" style="max-height: 7rem;">
+                    </div>
+                    <!-- Sponsor 2 -->
+                    <div class="bg-white p-4 rounded-3 shadow-sm border d-flex align-items-center justify-content-center"
+                        style="width: 250px; height: 160px;">
+                        <img src="./assets/sponser2.png" alt="Sponsor 2" class="img-fluid" style="max-height: 7rem;">
+                    </div>
+                    <!-- Sponsor 3 -->
+                    <div class="bg-white p-4 rounded-3 shadow-sm border d-flex align-items-center justify-content-center"
+                        style="width: 250px; height: 160px;">
+                        <img src="./assets/sponser3.png" alt="Sponsor 3" class="img-fluid" style="max-height: 7rem;">
+                    </div>
+                </div>
+            </div>
+        </section>
+<footer id="contact" class="bg-dark text-secondary py-5">
+            <div class="container px-4 px-md-5">
+                <div class="row g-5 mb-5">
+                    <div class="col-md-4">
+                        <h3 class="font-serif fs-4 fw-bold text-white mb-4">ICEQCIIS-2026</h3>
+                        <p class="small lh-lg mb-4">
+                            International Conference on Emerging Quantum Computing and IoT Technologies for Intelligent
+                            Security.
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#"
+                                class="btn btn-outline-secondary rounded-3 d-flex align-items-center justify-content-center p-0 transition-all text-white border-0"
+                                style="width: 2.5rem; height: 2.5rem; background-color: rgba(255,255,255,0.05);">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#"
+                                class="btn btn-outline-secondary rounded-3 d-flex align-items-center justify-content-center p-0 transition-all text-white border-0"
+                                style="width: 2.5rem; height: 2.5rem; background-color: rgba(255,255,255,0.05);">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#"
+                                class="btn btn-outline-secondary rounded-3 d-flex align-items-center justify-content-center p-0 transition-all text-white border-0"
+                                style="width: 2.5rem; height: 2.5rem; background-color: rgba(255,255,255,0.05);">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h4 class="fw-bold text-white fs-5 mb-4">CONTACT US</h4>
+                        <div class="d-flex flex-column gap-4">
+                            <!-- Convener -->
+                            <div>
+                                <h5 class="text-brand-gold fw-bold text-uppercase mb-2 border-bottom border-secondary pb-1 d-inline-block"
+                                    style="font-size: 0.875rem;">
+                                    Convener
+                                </h5>
+                                <div class="ms-1">
+                                    <p class="fw-bold text-white mb-1">Dr. K.V.D. Sagar</p>
+                                    <div class="small mt-1 d-flex flex-column gap-1">
+                                        <p class="mb-0 d-flex align-items-center gap-2"><i
+                                                class="fas fa-phone text-brand-gold" style="width: 1rem;"></i>
+                                            +91-9885182669</p>
+                                        <p class="mb-0 d-flex align-items-center gap-2"><i
+                                                class="fas fa-envelope text-brand-gold" style="width: 1rem;"></i> <a
+                                                href="mailto:sagar.tadepalli@kluniversity.in"
+                                                class="text-secondary text-decoration-none">sagar.tadepalli@kluniversity.in</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Co-Conveners -->
+                            <div>
+                                <h5 class="text-brand-gold fw-bold text-uppercase mb-2 border-bottom border-secondary pb-1 d-inline-block"
+                                    style="font-size: 0.875rem;">
+                                    Co-Conveners
+                                </h5>
+                                <div class="d-flex flex-column gap-3 ms-1">
+                                    <div>
+                                        <p class="fw-bold text-white small mb-1">Dr. Ch. Bhupathi</p>
+                                        <div class="small mt-1 d-flex flex-column gap-1" style="font-size: 0.8rem;">
+                                            <p class="mb-0 d-flex align-items-center gap-2"><i
+                                                    class="fas fa-phone text-brand-gold" style="width: 1rem;"></i>
+                                                7893500719</p>
+                                            <p class="mb-0 d-flex align-items-center gap-2"><i
+                                                    class="fas fa-envelope text-brand-gold" style="width: 1rem;"></i> <a
+                                                    href="mailto:Bhupati@kluniversity.in"
+                                                    class="text-secondary text-decoration-none">Bhupati@kluniversity.in</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold text-white small mb-1">Dr. KTPS Kumar</p>
+                                        <div class="small mt-1 d-flex flex-column gap-1" style="font-size: 0.8rem;">
+                                            <p class="mb-0 d-flex align-items-center gap-2"><i
+                                                    class="fas fa-phone text-brand-gold" style="width: 1rem;"></i>
+                                                9493025582</p>
+                                            <p class="mb-0 d-flex align-items-center gap-2"><i
+                                                    class="fas fa-envelope text-brand-gold" style="width: 1rem;"></i> <a
+                                                    href="mailto:satishkumar@kluniversity.in"
+                                                    class="text-secondary text-decoration-none">satishkumar@kluniversity.in</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h4 class="fw-bold text-white fs-5 mb-4">Quick Links</h4>
+                        <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                            <li><a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2F" target="_blank"
+                                    class="text-secondary text-decoration-none d-flex align-items-center gap-2 transition-colors nav-link p-0"><i
+                                        class="fas fa-angle-right small"></i> Submit Paper (Microsoft CMT)</a></li>
+                            <li><a href="javascript:void(0)" onclick="openBrochureModal()"
+                                    class="text-secondary text-decoration-none d-flex align-items-center gap-2 transition-colors nav-link p-0"><i
+                                        class="fas fa-angle-right small"></i> Download BROCHURE</a></li>
+
+</ul>
+                    </div>
+                </div>
+
+                <div
+                    class="border-top border-secondary pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center small text-secondary">
+                    <p class="mb-0">&copy; 2026 ICEQCIIS. All Rights Reserved.</p>
+                    <div class="d-flex gap-4 mt-3 mt-md-0">
+                        <a href="#" class="text-secondary text-decoration-none transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-secondary text-decoration-none transition-colors">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- BROCHURE Modal -->
+        <div id="brochure-modal" class="position-fixed top-0 start-0 w-100 h-100 d-none" style="z-index: 1100;"
+            aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <!-- Overlay with blur -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"
+                style="backdrop-filter: blur(8px);" onclick="closeBrochureModal()"></div>
+
+            <!-- Centering Wrapper -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center p-3 p-md-4"
+                style="pointer-events: none;">
+                <!-- Modal Content -->
+                <div class="position-relative w-100 bg-white rounded-4 shadow overflow-hidden d-flex flex-column"
+                    style="max-width: 64rem; height: 85vh; animation: fadeInScale 0.3s ease-out; pointer-events: auto;">
+                    <!-- Minimalist Header -->
+                    <div class="d-flex justify-content-between align-items-center px-4 py-3 border-bottom bg-white z-2">
+                        <h3 class="fs-5 fw-bold text-dark mb-0">
+                            Conference BROCHURE
+                        </h3>
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="assets/iceqciis-2026-brochure.pdf" download="ICEQCIIS-2026-BROCHURE.pdf"
+                                class="btn btn-dark btn-sm d-flex align-items-center gap-2 px-3 transition-all">
+                                <i class="fas fa-download"></i> <span class="d-none d-sm-inline">Download</span>
+                            </a>
+                            <button type="button" class="btn-close" onclick="closeBrochureModal()"
+                                aria-label="Close"></button>
+                        </div>
+                    </div>
+
+                    <!-- PDF Viewer -->
+                    <div class="position-relative flex-grow-1 w-100 bg-light overflow-hidden">
+                        <div class="position-absolute top-50 start-50 translate-middle text-secondary z-0 text-center">
+                            <i class="fas fa-spinner fa-spin fs-3 mb-2"></i>
+                            <div class="small text-muted mt-2">Loading PDF...</div>
+                        </div>
+                        <iframe src="assets/iceqciis-2026-brochure.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                            class="position-absolute top-0 start-0 w-100 h-100 border-0 z-1 bg-white"
+                            style="z-index: 10;">
+                            Your browser does not support PDFs. <a href="assets/iceqciis-2026-brochure.pdf">Download the
+                                brochure here</a>.
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Acknowledgment Modal -->
+        <div id="ack-modal" class="position-fixed top-0 start-0 w-100 h-100 d-none" style="z-index: 1080;"
+            aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"
+                style="backdrop-filter: blur(4px);" onclick="closeAckModal()"></div>
+            <div class="d-flex min-vh-100 align-items-center justify-content-center p-3">
+                <div class="position-relative w-100 bg-white rounded-4 shadow p-4 p-md-5"
+                    style="max-width: 48rem; animation: fadeInScale 0.3s ease-out;">
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-4" onclick="closeAckModal()"
+                        aria-label="Close"></button>
+                    <div class="d-flex align-items-center justify-content-center gap-3 mb-4 pb-2">
+                        <i class="fas fa-handshake fs-2 text-brand-blue"></i>
+                        <h3 class="font-serif fs-2 fw-bold text-brand-blue mb-0" id="modal-title">Acknowledgment</h3>
+                    </div>
+                    <div class="bg-light p-4 p-md-5 rounded-4 border">
+                        <p class="text-secondary fs-5 lh-lg fst-italic text-center fw-medium mb-0">
+                            "The Microsoft CMT service was used for managing the peer-reviewing process for this
+                            conference. This service was provided for free by Microsoft and they bore all expenses,
+                            including costs for Azure cloud services as well as for software development and support."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fixed Bottom Right Action Buttons -->
+        <div class="position-fixed d-flex flex-column gap-3 align-items-end"
+            style="bottom: 1.5rem; right: 1.5rem; z-index: 9999;">
+            <a href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2F" target="_blank"
+                class="btn rounded-pill shadow-lg text-brand-darkBlue fw-bold d-flex align-items-center justify-content-center gap-2 transition-all hover-translate-y-1 mb-2 px-4 py-2 border"
+                style="background-color: var(--brand-gold); border-color: #eab308; white-space: nowrap;">
+                <span class="fs-6 d-flex align-items-center gap-2"><i class="fas fa-paper-plane"></i> Submit
+                    Paper</span>
+            </a>
+            <a href="https://forms.gle/jGK9G8fB9BPwa6Sp8" target="_blank"
+                class="btn rounded-pill shadow-lg text-brand-darkBlue fw-bold d-flex align-items-center justify-content-center gap-2 transition-all hover-translate-y-1 mb-2 px-4 py-2 border"
+                style="background-color: var(--brand-cyan); border-color: rgba(34,211,238,0.5); white-space: nowrap;">
+                <span class="fs-6 d-flex align-items-center gap-2"><i class="fas fa-user-plus"></i> Register</span>
+            </a>
+            <button onclick="openBrochureModal()"
+                class="btn btn-dark rounded-pill shadow-lg fw-bold d-flex align-items-center justify-content-center gap-2 transition-all hover-translate-y-1 px-4 py-2 border border-secondary"
+                style="white-space: nowrap;">
+                <span class="fs-6 d-flex align-items-center gap-2"><i class="fas fa-file-pdf text-danger"></i>
+                    BROCHURE</span>
+            </button>
+        </div>
+
+            <script>
+        // BROCHURE Modal Functions
+        function openBrochureModal() {
+            const modal = document.getElementById('brochure-modal');
+            modal.classList.remove('d-none');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBrochureModal() {
+            const modal = document.getElementById('brochure-modal');
+            modal.classList.add('d-none');
+            document.body.style.overflow = '';
+        }
+
+        // Acknowledgment Modal Functions
+        function openAckModal() {
+            const modal = document.getElementById('ack-modal');
+            modal.classList.remove('d-none');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeAckModal() {
+            const modal = document.getElementById('ack-modal');
+            modal.classList.add('d-none');
+            document.body.style.overflow = '';
+        }
+
+        // Close modals on Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeBrochureModal();
+                closeAckModal();
+            }
+        });
+    </script>
+
+        <!-- Bootstrap JS Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
