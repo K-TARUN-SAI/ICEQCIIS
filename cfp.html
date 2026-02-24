@@ -42,7 +42,8 @@
 
             <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
                 <!-- Desktop nav items (Single Row) -->
-                <div class="d-none d-lg-flex justify-content-center align-items-center flex-wrap w-100 py-2" style="column-gap: 2rem; row-gap: 0.5rem;">
+                <div class="d-none d-lg-flex justify-content-center align-items-center flex-wrap w-100 py-2"
+                    style="column-gap: 2rem; row-gap: 0.5rem;">
                     <a href="index.html" class="nav-link-custom neon-glow">HOME</a>
                     <a href="about.html" class="nav-link-custom neon-glow">ABOUT</a>
                     <a href="committee.html" class="nav-link-custom neon-glow">COMMITTEES</a>
@@ -50,9 +51,9 @@
                     <a href="registration.html" class="nav-link-custom neon-glow">REGISTRATION</a>
                     <a href="contact.html" class="nav-link-custom neon-glow">CONTACT US</a>
                     <button onclick="openBrochureModal()"
-                            class="btn-nav-custom neon-glow cursor-pointer">BROCHURE</button>
+                        class="btn-nav-custom neon-glow cursor-pointer">BROCHURE</button>
                     <button onclick="openAckModal()" class="btn-nav-custom neon-glow cursor-pointer">CMT
-                            ACKNOWLEDGEMENT</button>
+                        ACKNOWLEDGEMENT</button>
                 </div>
 
                 <!-- Mobile nav items (1 column) -->
@@ -74,7 +75,7 @@
         </div>
     </nav>
 
-<section id="cfp" class="py-5 bg-white">
+    <section id="cfp" class="py-5 bg-white">
         <div class="container px-4 px-md-5">
             <div class="text-center mb-5">
                 <h2 class="font-serif fs-2 fw-bold text-brand-blue mb-3 text-uppercase" style="letter-spacing: 0.05em;">
@@ -280,7 +281,7 @@
             </div>
 
         </div>
-<footer id="contact" class="bg-dark text-secondary py-5">
+        <footer id="contact" class="bg-dark text-secondary py-5">
             <div class="container px-4 px-md-5">
                 <div class="row g-5 mb-5">
                     <div class="col-md-4">
@@ -380,7 +381,7 @@
                                     class="text-secondary text-decoration-none d-flex align-items-center gap-2 transition-colors nav-link p-0"><i
                                         class="fas fa-angle-right small"></i> Download BROCHURE</a></li>
 
-</ul>
+                        </ul>
                     </div>
                 </div>
 
@@ -487,46 +488,44 @@
             </button>
         </div>
 
-            <script>
-        // BROCHURE Modal Functions
-        function openBrochureModal() {
-            const modal = document.getElementById('brochure-modal');
-            modal.classList.remove('d-none');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeBrochureModal() {
-            const modal = document.getElementById('brochure-modal');
-            modal.classList.add('d-none');
-            document.body.style.overflow = '';
-        }
-
-        // Acknowledgment Modal Functions
-        function openAckModal() {
-            const modal = document.getElementById('ack-modal');
-            modal.classList.remove('d-none');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeAckModal() {
-            const modal = document.getElementById('ack-modal');
-            modal.classList.add('d-none');
-            document.body.style.overflow = '';
-        }
-
-        // Close modals on Escape key
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape') {
-                closeBrochureModal();
-                closeAckModal();
+        <script>
+            // BROCHURE Modal Functions
+            function openBrochureModal() {
+                const modal = document.getElementById('brochure-modal');
+                modal.classList.remove('d-none');
+                document.body.style.overflow = 'hidden';
             }
-        });
-    </script>
+
+            function closeBrochureModal() {
+                const modal = document.getElementById('brochure-modal');
+                modal.classList.add('d-none');
+                document.body.style.overflow = '';
+            }
+
+            // Acknowledgment Modal Functions
+            function openAckModal() {
+                const modal = document.getElementById('ack-modal');
+                modal.classList.remove('d-none');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeAckModal() {
+                const modal = document.getElementById('ack-modal');
+                modal.classList.add('d-none');
+                document.body.style.overflow = '';
+            }
+
+            // Close modals on Escape key
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeBrochureModal();
+                    closeAckModal();
+                }
+            });
+        </script>
 
         <!-- Bootstrap JS Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
