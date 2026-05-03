@@ -224,17 +224,29 @@
                     <div class="py-3 px-4 text-center" style="background-color: var(--brand-blue);">
                         <h3 class="text-white fw-bold fs-5 mb-0">Payment Details</h3>
                     </div>
-                    <div class="bg-white p-4 p-md-5 row g-4 text-secondary">
-                        <div class="col-md-6">
-                            <p class="mb-2"><span class="fw-bold text-dark">Bank Name:</span> State Bank of India
-                            </p>
-                            <p class="mb-2"><span class="fw-bold text-dark">Account Name:</span> KL University</p>
-                            <p class="mb-0"><span class="fw-bold text-dark">Account No:</span> 62434363674</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="mb-2"><span class="fw-bold text-dark">IFSC Code:</span> SBIN0021361</p>
-                            <p class="mb-0"><span class="fw-bold text-dark">Branch:</span> Vaddeswaram, Guntur-522
-                                302</p>
+                    <div class="bg-white p-4 p-md-5 text-secondary">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-md-8">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <p class="mb-2"><span class="fw-bold text-dark">Bank Name:</span> State Bank of India
+                                        </p>
+                                        <p class="mb-2"><span class="fw-bold text-dark">Account Name:</span> KL University</p>
+                                        <p class="mb-0"><span class="fw-bold text-dark">Account No:</span> 62434363674</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="mb-2"><span class="fw-bold text-dark">IFSC Code:</span> SBIN0021361</p>
+                                        <p class="mb-0"><span class="fw-bold text-dark">Branch:</span> Vaddeswaram, Guntur-522
+                                            302</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center border-start-md">
+                                <div class="d-inline-block p-2 bg-light rounded-3 shadow-sm clickable-image" onclick="openImageViewer('assets/QRcode.png')">
+                                    <img src="assets/QRcode.png" alt="Payment QR Code" class="img-fluid rounded-2" style="max-height: 180px;">
+                                </div>
+                                <p class="small fw-bold text-dark mt-2 mb-0">SCAN TO PAY</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -855,9 +867,33 @@
             if (event.key === 'Escape') {
                 closeBrochureModal();
                 closeAckModal();
+                closeImageViewer();
             }
         });
+
+        // Image Viewer Functions
+        function openImageViewer(src) {
+            const overlay = document.getElementById('image-viewer');
+            const viewerImg = document.getElementById('viewer-img');
+            viewerImg.src = src;
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageViewer() {
+            const overlay = document.getElementById('image-viewer');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
     </script>
+
+    <!-- Image Viewer Modal -->
+    <div id="image-viewer" class="image-viewer-overlay" onclick="closeImageViewer()">
+        <span class="close-viewer" onclick="closeImageViewer()">&times;</span>
+        <div class="image-viewer-container" onclick="event.stopPropagation()">
+            <img id="viewer-img" src="" alt="Enlarged view" class="image-viewer-img">
+        </div>
+    </div>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
